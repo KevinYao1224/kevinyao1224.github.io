@@ -1,17 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-07-29T18:28:36+08:00</updated><id>/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="/jekyll/update/2024/07/29/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2024-07-29T13:29:00+08:00</published><updated>2024-07-29T13:29:00+08:00</updated><id>/jekyll/update/2024/07/29/welcome-to-jekyll</id><content type="html" xml:base="/jekyll/update/2024/07/29/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-31T18:42:18+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">kyEEcccccc 的枢纽</title><subtitle></subtitle><author><name>kyEEcccccc</name></author><entry><title type="html">Cipolla 二次剩余算法和简要证明</title><link href="http://localhost:4000/oi/2024/02/21/Cipolla-%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99%E7%AE%97%E6%B3%95%E5%92%8C%E7%AE%80%E8%A6%81%E8%AF%81%E6%98%8E.html" rel="alternate" type="text/html" title="Cipolla 二次剩余算法和简要证明" /><published>2024-02-21T00:00:00+08:00</published><updated>2024-02-21T00:00:00+08:00</updated><id>http://localhost:4000/oi/2024/02/21/Cipolla-%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99%E7%AE%97%E6%B3%95%E5%92%8C%E7%AE%80%E8%A6%81%E8%AF%81%E6%98%8E</id><content type="html" xml:base="http://localhost:4000/oi/2024/02/21/Cipolla-%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99%E7%AE%97%E6%B3%95%E5%92%8C%E7%AE%80%E8%A6%81%E8%AF%81%E6%98%8E.html"><![CDATA[<h3 id="二次剩余的判定">二次剩余的判定</h3>
 
-<p>Jekyll requires blog post files to be named according to the following format:</p>
+<p>在模奇素数 $p$ 意义下：
+\(a^{\frac{p-1}{2}} = \begin{cases}
+1, &amp;a \text{是二次剩余}\\
+-1, &amp;a \text{不是二次剩余}
+\end{cases}\)
+在 $1\dots p-1$ 这些数中，恰好有二分之一（$\frac{p-1}{2}$ 个）是二次剩余，二分之一不是。</p>
 
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+<h3 id="一个同余式">一个同余式</h3>
 
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<p>在模奇素数 $p$ 意义下：
+\(\begin{aligned}
+(a+b)^p &amp;= a^p+\binom{p}{1}a^{p-1}b+\dots+\binom{p}{p-1}ab^{p-1} + b^p\\
+&amp;= a^p+b^p
+\end{aligned}\)
+这是因为对于奇素数 $p$ 和 $i\in[1, p-1]$，$p\mid\binom{p}{i}$。</p>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<h3 id="cipolla-算法">Cipolla 算法</h3>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry></feed>
+<p>断言对于奇素数 $p$ 和 $(a,p) = 1$，方程 $x^2\equiv a\pmod p$ 的一个解可以用如下方式寻找：找到 $r$ 使得 $r^2-a$ 为二次非剩余，扩域令 $j^2 = r^2-a$，则 $x \equiv (a+j)^\frac{p+1}{2} \pmod {p}$。注意到这还表明 $(a+j)^\frac{p+1}{2}$ 虚部为 $0$。证明如下。
+\(\begin{aligned}
+x^2 &amp;\equiv (r+j)^p(r+j) \pmod p\\
+&amp;\equiv (r^p+j^p)(r+j) \pmod p\\
+&amp;\equiv (r+(j^2)^{\frac{p-1}{2}}\cdot j)(r+j) \pmod p\\
+&amp;\equiv (r+(r^2-a)^{\frac{p-1}{2}}\cdot j)(r+j) \pmod p\\
+&amp;\equiv (r-j)(r+j) \pmod p\\
+&amp;\equiv r^2-j^2 \pmod p\\
+&amp;\equiv r^2-(r^2-a) \pmod p\\
+&amp;\equiv a \pmod p\\
+\end{aligned}\)
+通过随机化寻找 $r$，期望 $\Theta(1)$ 次即可找到。时间复杂度为快速幂的复杂度，即一般的 $\Theta(\log p)$。</p>]]></content><author><name>kyEEcccccc</name></author><category term="OI" /><category term="学习笔记 数论" /><summary type="html"><![CDATA[二次剩余的判定]]></summary></entry></feed>
