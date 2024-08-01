@@ -31,12 +31,11 @@ github_username: KevinYao1224
 author: kyEEcccccc #  Default is your site title.
 social:
   github: KevinYao1224
-
 theme_setting:
   nav_pages:
-    - "about.markdown"
-    - "archive.markdown"
-    - "categories.markdown"
+    - "notes.markdown"
+    - "articles.markdown"
+    - "about-me.markdown"
 
 # Build settings
 # theme: minima
@@ -44,6 +43,8 @@ theme: jekyll-theme-persephone
 plugins:
   - jekyll-feed
 
+kramdown:
+  math_engine: null
 destination: docs
 
 # Exclude from processing.
