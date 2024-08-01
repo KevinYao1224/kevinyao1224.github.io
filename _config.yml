@@ -42,9 +42,10 @@ theme_setting:
 theme: jekyll-theme-persephone
 plugins:
   - jekyll-feed
+  - jekyll-t4j
 
-kramdown:
-  math_engine: null
+# kramdown:
+#   math_engine: null
 destination: docs
 
 # Exclude from processing.
