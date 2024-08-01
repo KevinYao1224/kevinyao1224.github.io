@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-08-01T16:53:00+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">kyEEcccccc 的枢纽</title><subtitle></subtitle><author><name>kyEEcccccc</name></author><entry><title type="html">关于博客搭建的简评</title><link href="http://localhost:4000/2024/08/01/%E9%9A%8F%E8%AE%B0.html" rel="alternate" type="text/html" title="关于博客搭建的简评" /><published>2024-08-01T00:00:00+08:00</published><updated>2024-08-01T00:00:00+08:00</updated><id>http://localhost:4000/2024/08/01/%E9%9A%8F%E8%AE%B0</id><content type="html" xml:base="http://localhost:4000/2024/08/01/%E9%9A%8F%E8%AE%B0.html"><![CDATA[<p>对主题进行了魔改以达到我想要的效果，但是非常简陋。不管了。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-08-01T17:05:52+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">kyEEcccccc 的枢纽</title><subtitle></subtitle><author><name>kyEEcccccc</name></author><entry><title type="html">关于博客搭建的简评</title><link href="http://localhost:4000/2024/08/01/%E9%9A%8F%E8%AE%B0.html" rel="alternate" type="text/html" title="关于博客搭建的简评" /><published>2024-08-01T00:00:00+08:00</published><updated>2024-08-01T00:00:00+08:00</updated><id>http://localhost:4000/2024/08/01/%E9%9A%8F%E8%AE%B0</id><content type="html" xml:base="http://localhost:4000/2024/08/01/%E9%9A%8F%E8%AE%B0.html"><![CDATA[<p>对主题进行了魔改以达到我想要的效果，但是非常简陋。不管了。</p>
 
 <p><strong>最高指示</strong>：随记不能有 <code class="language-plaintext highlighter-rouge">catagories</code> 条目，否则会导致文章分类显示出现问题。</p>
 
@@ -8,10 +8,12 @@
 
 <p>在模奇素数 $p$ 意义下：</p>
 
-\[a^{\frac{p-1}{2}} = \begin{cases}
-1, &amp;a \text{是二次剩余}\\
--1, &amp;a \text{不是二次剩余}
-\end{cases}\]
+<div class="kdmath">$$
+a^{\frac{p-1}{2}} = \begin{cases}
+1, &a \text{是二次剩余}\\
+-1, &a \text{不是二次剩余}
+\end{cases}
+$$</div>
 
 <p>在 $1\dots p-1$ 这些数中，恰好有二分之一（$\frac{p-1}{2}$ 个）是二次剩余，二分之一不是。</p>
 
@@ -19,10 +21,12 @@
 
 <p>在模奇素数 $p$ 意义下：</p>
 
-\[\begin{aligned}
-(a+b)^p &amp;= a^p+\binom{p}{1}a^{p-1}b+\dots+\binom{p}{p-1}ab^{p-1} + b^p\\
-&amp;= a^p+b^p
-\end{aligned}\]
+<div class="kdmath">$$
+\begin{aligned}
+(a+b)^p &= a^p+\binom{p}{1}a^{p-1}b+\dots+\binom{p}{p-1}ab^{p-1} + b^p\\
+&= a^p+b^p
+\end{aligned}
+$$</div>
 
 <p>这是因为对于奇素数 $p$ 和 $i\in[1, p-1]$，$p\mid\binom{p}{i}$。</p>
 
@@ -30,17 +34,21 @@
 
 <p>断言对于奇素数 $p$ 和 $(a,p) = 1$，方程 $x^2\equiv a\pmod p$ 的一个解可以用如下方式寻找：找到 $r$ 使得 $r^2-a$ 为二次非剩余，扩域令 $j^2 = r^2-a$，则 $x \equiv (a+j)^\frac{p+1}{2} \pmod {p}$。注意到这还表明 $(a+j)^\frac{p+1}{2}$ 虚部为 $0$。证明如下。</p>
 
-\[\begin{aligned}
-x^2 &amp;\equiv (r+j)^p(r+j) \pmod p\\
-&amp;\equiv (r^p+j^p)(r+j) \pmod p\\
-&amp;\equiv (r+(j^2)^{\frac{p-1}{2}}\cdot j)(r+j) \pmod p\\
-&amp;\equiv (r+(r^2-a)^{\frac{p-1}{2}}\cdot j)(r+j) \pmod p\\
-&amp;\equiv (r-j)(r+j) \pmod p\\
-&amp;\equiv r^2-j^2 \pmod p\\
-&amp;\equiv r^2-(r^2-a) \pmod p\\
-&amp;\equiv a \pmod p\\
-\end{aligned}\]
+<div class="kdmath">$$
+\begin{aligned}
+x^2 &\equiv (r+j)^p(r+j) \pmod p\\
+&\equiv (r^p+j^p)(r+j) \pmod p\\
+&\equiv (r+(j^2)^{\frac{p-1}{2}}\cdot j)(r+j) \pmod p\\
+&\equiv (r+(r^2-a)^{\frac{p-1}{2}}\cdot j)(r+j) \pmod p\\
+&\equiv (r-j)(r+j) \pmod p\\
+&\equiv r^2-j^2 \pmod p\\
+&\equiv r^2-(r^2-a) \pmod p\\
+&\equiv a \pmod p\\
+\end{aligned}
+$$</div>
 
 <p>通过随机化寻找 $r$，期望 $\Theta(1)$ 次即可找到。时间复杂度为快速幂的复杂度，即一般的 $\Theta(\log p)$。</p>
 
-\[H_n=1+\frac{1}{2}+\frac{1}{3}+...+\frac{1}{n}=\sum_{i=1}^{n}\frac{1}{i}=O(\log n)\]]]></content><author><name>kyEEcccccc</name></author><category term="OI" /><summary type="html"><![CDATA[二次剩余的判定]]></summary></entry></feed>
+<div class="kdmath">$$
+H_n=1+\frac{1}{2}+\frac{1}{3}+...+\frac{1}{n}=\sum_{i=1}^{n}\frac{1}{i}=O(\log n)
+$$</div>]]></content><author><name>kyEEcccccc</name></author><category term="OI" /><summary type="html"><![CDATA[二次剩余的判定]]></summary></entry></feed>
