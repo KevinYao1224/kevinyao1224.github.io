@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 极稀极易水解
-catagories: 高中知识
+categories: 高中知识
 ---
 
 关于“极稀极易水解”的定量分析。
