@@ -1,4 +1,114 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-08-03T08:55:34+08:00</updated><id>/feed.xml</id><title type="html">kyEEcccccc 的枢纽</title><subtitle></subtitle><author><name>kyEEcccccc</name></author><entry><title type="html">关于随记</title><link href="/2024/08/02/2-%E5%85%B3%E4%BA%8E%E9%9A%8F%E8%AE%B0.html" rel="alternate" type="text/html" title="关于随记" /><published>2024-08-02T00:00:00+08:00</published><updated>2024-08-02T00:00:00+08:00</updated><id>/2024/08/02/2-%E5%85%B3%E4%BA%8E%E9%9A%8F%E8%AE%B0</id><content type="html" xml:base="/2024/08/02/2-%E5%85%B3%E4%BA%8E%E9%9A%8F%E8%AE%B0.html"><![CDATA[<p>随记我的看法是当作一种类似<strong>便笺(jian1)/备忘录</strong>的东西，主打简短。同时它也承担类似<strong>公告栏</strong>或者<strong>修订说明</strong>之类的功能，主要特点的是<strong>零散</strong>和<strong>繁多</strong>。这个功能是我搭建博客时花了点功夫魔改出来的，也是特色。我不给随记加分类，一方面是博客网站配置不会处理，另一方面（主要的）就是考虑到这个功能不需要且最好不要加分类，所以也不费心去研究配置。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-08-03T21:37:17+08:00</updated><id>/feed.xml</id><title type="html">kyEEcccccc 的枢纽</title><subtitle></subtitle><author><name>kyEEcccccc</name></author><entry><title type="html">瑞幸咖啡</title><link href="/2024/08/03/1-%E7%91%9E%E5%B9%B8%E5%92%96%E5%95%A1.html" rel="alternate" type="text/html" title="瑞幸咖啡" /><published>2024-08-03T00:00:00+08:00</published><updated>2024-08-03T00:00:00+08:00</updated><id>/2024/08/03/1-%E7%91%9E%E5%B9%B8%E5%92%96%E5%95%A1</id><content type="html" xml:base="/2024/08/03/1-%E7%91%9E%E5%B9%B8%E5%92%96%E5%95%A1.html"><![CDATA[<p>随瑞幸咖啡自从推出逆天酱香拿铁以后，又推出了茶咖。我在连续三天内依次尝试了单丛、茉莉花和第三款（名字忘了）。</p>
+
+<ul>
+  <li>单丛口感神秘，我觉得还可以，cccllf 认为不好喝。值得<strong>尝试</strong>。</li>
+  <li>茉莉花有浓郁的茉莉花香味。我认为比较好喝，cccllf 也认为好喝。</li>
+  <li>第三款刚喝了几口。首先推荐的“标准糖”是比较甜的，其次味道还可以，茶味比起前两款不那么明显。</li>
+</ul>
+
+<p>必须指出：如果喜欢咖啡本味你不应该尝试这些茶咖。</p>]]></content><author><name>kyEEcccccc</name></author><summary type="html"><![CDATA[随瑞幸咖啡自从推出逆天酱香拿铁以后，又推出了茶咖。我在连续三天内依次尝试了单丛、茉莉花和第三款（名字忘了）。]]></summary></entry><entry><title type="html">一篇关于哥德尔不完备定理的文章之阅读笔记</title><link href="/2024/08/03/%E4%B8%80%E7%AF%87%E5%85%B3%E4%BA%8E%E5%93%A5%E5%BE%B7%E5%B0%94%E4%B8%8D%E5%AE%8C%E5%A4%87%E5%AE%9A%E7%90%86%E7%9A%84%E6%96%87%E7%AB%A0%E4%B9%8B%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0.html" rel="alternate" type="text/html" title="一篇关于哥德尔不完备定理的文章之阅读笔记" /><published>2024-08-03T00:00:00+08:00</published><updated>2024-08-03T00:00:00+08:00</updated><id>/2024/08/03/%E4%B8%80%E7%AF%87%E5%85%B3%E4%BA%8E%E5%93%A5%E5%BE%B7%E5%B0%94%E4%B8%8D%E5%AE%8C%E5%A4%87%E5%AE%9A%E7%90%86%E7%9A%84%E6%96%87%E7%AB%A0%E4%B9%8B%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0</id><content type="html" xml:base="/2024/08/03/%E4%B8%80%E7%AF%87%E5%85%B3%E4%BA%8E%E5%93%A5%E5%BE%B7%E5%B0%94%E4%B8%8D%E5%AE%8C%E5%A4%87%E5%AE%9A%E7%90%86%E7%9A%84%E6%96%87%E7%AB%A0%E4%B9%8B%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0.html"><![CDATA[<h2 id="参考">参考</h2>
+
+<ul>
+  <li>
+    <p><a href="https://www.zhihu.com/question/27157141/answer/2916484836">如何通俗的理解哥德尔不完备定理？ - 知乎</a></p>
+  </li>
+  <li>
+    <p>维基百科</p>
+  </li>
+</ul>
+
+<h2 id="命题形式语言命题逻辑与一阶逻辑">命题、形式语言、命题逻辑与一阶逻辑</h2>
+
+<p><strong>命题</strong>是陈述句所蕴含的语义，它描述事物的性质，具有<strong>真值</strong>（即可以判断真假）。不同的陈述句，或同样的语义用不同语言表述，都可能表达同一个命题——命题是语义，不是语句本身。</p>
+
+<p>一个<strong>良构</strong>的语句应当描述<strong>唯一</strong>的命题。</p>
+
+<p><strong>逻辑表达式</strong>是一种数学家常常用来表述命题的工具。我们用这样的符号 $\varphi(x)$，指代一个逻辑表达式，其中有一个<strong>变元</strong> $x$。换句话说，我们可以在这个表达式中，将 $x$ 代入<strong>某些</strong>事物，形成一个语句，表述一个命题。具有变元的逻辑表达式与一组而不是一个命题有关。数学家往往用某些特定的逻辑符号书写逻辑表达式，但这不是重点。逻辑表达式代入具体变元，使得其中不再含有变元后，就可以成为一个语句，表述一个命题。</p>
+
+<p><strong>命题逻辑</strong>中的语句就是代入了变元的表达式。命题逻辑也叫零阶逻辑。</p>
+
+<p><strong>一阶逻辑</strong>中有着<strong>量词</strong>。量词加在含变元的表达式前，使得表达式代入（由量词指定的）一系列变元，得到一系列表达式；这些表达式的真值通过（由量词指定的）某种方式聚合，得到一个新的表达式（或者一个语句）。所以一阶逻辑中的表达式和语句比命题逻辑更复杂，也就可以表述更多信息。</p>
+
+<p>有一种”无限制的自由主义“（原文），认为在逻辑表达式 $\varphi(x)$ 中，$x$ 可以代入任何事物。这种观点会让某些逻辑表达式在某些时候变得没有意义，所以存在着谬误。用类似于 Rice 定理（与停机问题）和罗素悖论的构造手法，可以构造如下：考虑表达式 $\varphi(\psi,x) = \psi(x)$，表达式 $\pi(x) = \neg\varphi(x,x)$，则 $\varphi(\pi,\pi)$ 的真值是什么？不难发现 $\varphi(\pi,\pi) = \pi(\pi) = \neg\varphi(\pi,\pi)$。这种明显非良构的语句（不对应任何合法命题）告诉我们，必须对变元加以限制，才能让我们的逻辑体系不至崩溃。</p>
+
+<blockquote>
+  <p>停机问题的证否：</p>
+
+  <p>假设存在图灵机上的程序 $H(P,x)$，它输入一个程序 $P$ 和一组数据 $x$，并将在有限时间停机并输出 $P(x)$ （即将 $x$ 输入 $P$ 运行）是否在有限时间停机。</p>
+
+  <p>考虑程序 $U(P)$，它首先得到结果 $H(P,P)$，随后根据这个结果</p>
+
+  <ul>
+    <li>如果输出”停机“那么 $U$ 立刻进入无限循环，永不停机。</li>
+    <li>如果输出”不停机“那么 $U$ 立刻停机。</li>
+  </ul>
+
+  <p>然后我们运行 $H(U,U)$，于是</p>
+
+  <ul>
+    <li>若它应当输出”停机“，那么 $U(U)$ 将停机，它的输出是错的。</li>
+    <li>若它应当输出”不停机“，那么 $U(U)$ 将不会停机，它的输出是错的。</li>
+  </ul>
+
+  <p>所以程序 $H$ 无法存在。</p>
+</blockquote>
+
+<p>许多理论是<strong>一阶逻辑</strong>上的，比如关于自然数的皮亚诺公理体系、NBG 集合论体系、ZF(C) 集合论体系。</p>
+
+<h2 id="模型论">模型论</h2>
+
+<p>来自维基百科。</p>
+
+<p>首先有<strong>语言</strong>，接着定义了某语言上的<strong>结构</strong>。一种语言的一种结构由这样的部分构成：首先是一个集合，被称为<strong>论域</strong>，它的元素表示我们讨论的对象。我们只研究和表述这些对象的性质，以及它们之间的关联（<strong>注意我们不可以讨论论域本身的性质</strong>）。其次，它还包含对语言中词汇的<strong>解释</strong>，具体地，它将对于这个语言中的<strong>常量符号</strong>都对应到论域的某个元素，<strong>函数和关系符号</strong>（如果存在）都对应到论域上的某个函数和某个关系。</p>
+
+<p>语言上还定义了<strong>理论</strong>。一个理论是用语言写出的<strong>句子</strong>的一个集合。如果这个集合中的句子符合通常的<strong>推理规则</strong>，那么说这个理论是<strong>闭合理论</strong>。</p>
+
+<p>注意到当我们手头有一个理论，我们几乎不能研究其中的句子，至少对于它们的<strong>真值</strong>完全无法判断。这是因为：句子中的<strong>符号</strong>没有绑定<strong>具体概念</strong>；句子中的<strong>量词</strong>（所有、存在）不能明确<strong>具体范围</strong>。但我们确实可以判断它<strong>语法上的/形式上的</strong>性质，比如说在通常的推理规则下是否闭合。</p>
+
+<p>为了研究某个理论，我们寻找它的语言的一个模型。这个模型赋予这个理论的语句中的那些变元和量词具体含义，同时也立刻使得这些语句拥有真值。我们说这个模型是“某理论的模型”，如果在这个模型下，使得这个理论中的所有语句都是<strong>真</strong>的。如果对于一个理论，存在至少一个属于它的模型，那么说这个理论<strong>可满足</strong>。</p>
+
+<p>模型论与<strong>一阶逻辑</strong>有关，所以上面我们所说的内容，大多属于一阶逻辑。二阶逻辑有着比一阶逻辑更多的内容和更强的表达能力，所以很多模型论的断言在上面失效了。</p>
+
+<h2 id="一阶逻辑的哥德尔完备性定理">（一阶逻辑的）哥德尔完备性定理</h2>
+
+<p>什么是<strong>完备</strong>？和<strong>完备性</strong>相对的概念是<strong>可靠性</strong>。这两个词刻画了语义和语法、实质和形式、命题和形式语言的语句之间的关系。</p>
+
+<p>如果一个语言中的某语句在该语言的所有模型下都是真的，这个语句就是<strong>逻辑上有效的</strong>。注意到在上一句话中，我们其实在说语句在不同模型中表达的<strong>语义</strong>有什么共同性质，直觉告诉我们，这与语句自身的<strong>语法结构或者说形态</strong>是有关系的，但不完全相同。</p>
+
+<p>一套推理规则具有<strong>完备性</strong>，就是说所有有效的语句都可以通过推理被证明。反之，具有<strong>可靠性</strong>是在说能证明的语句都是有效的。</p>
+
+<p><strong>哥德尔完备性定理</strong>告诉我们：一阶逻辑具有完备性。这个定理的<strong>更一般形式</strong>告诉我们：对于一阶逻辑的任何理论与一个句子，如果这个句子在理论的所有模型中为真，那么这个句子可以由理论中的句子经过推导而得到。</p>
+
+<p>另一个定理（<strong>可靠性定理</strong>）也告诉我们：一阶逻辑具有可靠性。</p>
+
+<p>可靠性在许多人看来似乎比完备性更重要——毕竟如果一套规则允许我们推导出一个语句，但是这个语句对应的命题有时候是假的，那么这一套规则就显得很没意义。</p>
+
+<h2 id="自然数">自然数</h2>
+
+<p><strong>自然数</strong>很重要，因为：</p>
+
+<ul>
+  <li>这样的概念在现实中广泛存在。</li>
+  <li>许多概念可以基于自然数得到描述。</li>
+  <li>自然数理论可以成为许多理论的基础。</li>
+  <li>（由于第一条）我们习惯于使用自然数。</li>
+</ul>
+
+<p>真正的自然数的概念存在于元语言。元语言不严谨，而且有时候很经验，但是不可或缺。无论我们怎样将元语言中的概念规范化，它都不可能真正意义上完全进入形式语言。在形式语言中总有不加论证的概念和语法，考虑为什么采用它们就需要用到元语言。这是因为<strong>世界</strong>和<strong>认识</strong>存在着永远不可跨越的断裂。</p>
+
+<blockquote>
+  <p>有时候我觉得现实世界和理念世界像两尊古神，而（研究数学和哲学时的）我们快乐地生活在地球上，玩弄着古神的影子（表现为物理规律、自然现象等等）。但是如果要古神真的进入这个世界，那就崩毁了；或者这样的事情根本不会发生——不会有一个”洞穴寓言“中那样的”离开山洞的时刻“——符号的世界还是太弱了，根本不能承载古神的身躯。</p>
+</blockquote>
+
+<p>一阶逻辑中有一个关于自然数的理论——皮亚诺公理体系（其实也包含了它的语言）。皮亚诺公理体系中的一些符号和语句可以被解释成标准自然数和它的命题。皮亚诺公理体系有模型，因为它是自洽的且一阶逻辑是完备的。由于上面的原因，皮亚诺公理体系的模型的论域的元素中<strong>总有一些</strong>可以解释成标准自然数，并且<strong>所有标准自然数</strong>都被以这种方式包含在其中。<strong>但是其实它也可以包含一些别的东西</strong>，这些东西被叫做非标自然数，它不能解释为真正的自然数。在我们（元语言中）看来这些非标自然数似乎都比真正的自然数大。</p>
+
+<blockquote>
+  <p>接下来才是重头戏，但是我很懒惰，下次更新。</p>
+</blockquote>
+
+<h2 id="塔斯基真值不可定义定理">塔斯基真值不可定义定理</h2>
+
+<h2 id="哥德尔不完备性定理">哥德尔不完备性定理</h2>]]></content><author><name>kyEEcccccc</name></author><summary type="html"><![CDATA[参考]]></summary></entry><entry><title type="html">关于随记</title><link href="/2024/08/02/2-%E5%85%B3%E4%BA%8E%E9%9A%8F%E8%AE%B0.html" rel="alternate" type="text/html" title="关于随记" /><published>2024-08-02T00:00:00+08:00</published><updated>2024-08-02T00:00:00+08:00</updated><id>/2024/08/02/2-%E5%85%B3%E4%BA%8E%E9%9A%8F%E8%AE%B0</id><content type="html" xml:base="/2024/08/02/2-%E5%85%B3%E4%BA%8E%E9%9A%8F%E8%AE%B0.html"><![CDATA[<p>随记我的看法是当作一种类似<strong>便笺(jian1)/备忘录</strong>的东西，主打简短。同时它也承担类似<strong>公告栏</strong>或者<strong>修订说明</strong>之类的功能，主要特点的是<strong>零散</strong>和<strong>繁多</strong>。这个功能是我搭建博客时花了点功夫魔改出来的，也是特色。我不给随记加分类，一方面是博客网站配置不会处理，另一方面（主要的）就是考虑到这个功能不需要且最好不要加分类，所以也不费心去研究配置。</p>
 
 <p>随记会有两种，一种是给别人看的，一种是给自己看的（起到对<strong>灵光乍现</strong>的记录作用）。后者为什么不是（我希望）给别人看的？是因为这些想法不完整，不成熟，可能还会撤换修正。所以</p>
 
@@ -6,13 +116,7 @@
 
 <p>我觉得把随记按照<strong>时间</strong>和<strong>类别</strong>来筛选、修订、整理成合辑，放到文章里是一个好主意。那么它就要遵循关于文章的要求（详见上则）。</p>
 
-<p>同一天写的随记需要标号，不然似乎不能区分先后。</p>]]></content><author><name>kyEEcccccc</name></author><summary type="html"><![CDATA[随记我的看法是当作一种类似便笺(jian1)/备忘录的东西，主打简短。同时它也承担类似公告栏或者修订说明之类的功能，主要特点的是零散和繁多。这个功能是我搭建博客时花了点功夫魔改出来的，也是特色。我不给随记加分类，一方面是博客网站配置不会处理，另一方面（主要的）就是考虑到这个功能不需要且最好不要加分类，所以也不费心去研究配置。]]></summary></entry><entry><title type="html">关于博客</title><link href="/2024/08/02/1-%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2.html" rel="alternate" type="text/html" title="关于博客" /><published>2024-08-02T00:00:00+08:00</published><updated>2024-08-02T00:00:00+08:00</updated><id>/2024/08/02/1-%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2</id><content type="html" xml:base="/2024/08/02/1-%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2.html"><![CDATA[<p><em>Cipolla 算法及其简要证明</em> 作为网站 LaTeX 和文章分类页面的测试被刊登，目前有计划将我在 cnblogs 上的文章分类整理并<strong>筛选</strong>后登上来，但是这个工作量比较大，且不着急（只需要在 cnblogs 倒闭前做完即可）。</p>
-
-<p><strong>最高指示</strong>：目前我对旧文章日期的看法是采用原本的日期。对于有修订的新旧文章，我认为依然采用第一次正式发布的日期。但是对于大规模增删的段落，采用分割线隔开，并注明修改日期，对于小规模修订采用行内/行间注释的方式标明修订内容。<strong>精神</strong>是保留文章的不同版本，不让人看了云里雾里。</p>
-
-<p><strong>最高指示</strong>：对于删改特别多特别复杂的文章，应该增设新的篇目。新的篇目采用修订时的修改日期。</p>
-
-<p><strong>最高指示</strong>：撤去文章应该在原来位置保留一份说明。<strong>所有涉及 URL 变换的都应当这样做！</strong></p>]]></content><author><name>kyEEcccccc</name></author><summary type="html"><![CDATA[Cipolla 算法及其简要证明 作为网站 LaTeX 和文章分类页面的测试被刊登，目前有计划将我在 cnblogs 上的文章分类整理并筛选后登上来，但是这个工作量比较大，且不着急（只需要在 cnblogs 倒闭前做完即可）。]]></summary></entry><entry><title type="html">极稀极易水解</title><link href="/%E9%AB%98%E4%B8%AD%E7%9F%A5%E8%AF%86/2024/08/02/%E6%9E%81%E7%A8%80%E6%9E%81%E6%98%93%E6%B0%B4%E8%A7%A3.html" rel="alternate" type="text/html" title="极稀极易水解" /><published>2024-08-02T00:00:00+08:00</published><updated>2024-08-02T00:00:00+08:00</updated><id>/%E9%AB%98%E4%B8%AD%E7%9F%A5%E8%AF%86/2024/08/02/%E6%9E%81%E7%A8%80%E6%9E%81%E6%98%93%E6%B0%B4%E8%A7%A3</id><content type="html" xml:base="/%E9%AB%98%E4%B8%AD%E7%9F%A5%E8%AF%86/2024/08/02/%E6%9E%81%E7%A8%80%E6%9E%81%E6%98%93%E6%B0%B4%E8%A7%A3.html"><![CDATA[<p>关于“极稀极易水解”的定量分析。</p>
+<p>同一天写的随记需要标号，不然似乎不能区分先后。</p>]]></content><author><name>kyEEcccccc</name></author><summary type="html"><![CDATA[随记我的看法是当作一种类似便笺(jian1)/备忘录的东西，主打简短。同时它也承担类似公告栏或者修订说明之类的功能，主要特点的是零散和繁多。这个功能是我搭建博客时花了点功夫魔改出来的，也是特色。我不给随记加分类，一方面是博客网站配置不会处理，另一方面（主要的）就是考虑到这个功能不需要且最好不要加分类，所以也不费心去研究配置。]]></summary></entry><entry><title type="html">极稀极易水解</title><link href="/%E9%AB%98%E4%B8%AD%E7%9F%A5%E8%AF%86/2024/08/02/%E6%9E%81%E7%A8%80%E6%9E%81%E6%98%93%E6%B0%B4%E8%A7%A3.html" rel="alternate" type="text/html" title="极稀极易水解" /><published>2024-08-02T00:00:00+08:00</published><updated>2024-08-02T00:00:00+08:00</updated><id>/%E9%AB%98%E4%B8%AD%E7%9F%A5%E8%AF%86/2024/08/02/%E6%9E%81%E7%A8%80%E6%9E%81%E6%98%93%E6%B0%B4%E8%A7%A3</id><content type="html" xml:base="/%E9%AB%98%E4%B8%AD%E7%9F%A5%E8%AF%86/2024/08/02/%E6%9E%81%E7%A8%80%E6%9E%81%E6%98%93%E6%B0%B4%E8%A7%A3.html"><![CDATA[<p>关于“极稀极易水解”的定量分析。</p>
 
 <p>考虑一元酸 $HX$ 和它的钠盐（强电解质）$NaX$，现在室温水溶液中 $NaX$ 浓度为 $c_0$，分析离子浓度。主要是比较 $[HX]$ 和 $[X^-]$。</p>
 
@@ -48,7 +152,13 @@ $$</div>
 
 <p>也即当<strong>加入的盐浓度小于对应一元酸根水解常数的两倍</strong>时，认为“极稀极易水解”成立。</p>
 
-<p>关于上面的假设 $[HX]\gg10^{-7}$：注意到计算结果中 $[HX] &gt; \dfrac{c_0}{2}$，所以只要 $c_0$ 不小得离谱我们的结果还是比较可信的。</p>]]></content><author><name>kyEEcccccc</name></author><category term="高中知识" /><summary type="html"><![CDATA[关于“极稀极易水解”的定量分析。]]></summary></entry><entry><title type="html">关于博客搭建</title><link href="/2024/08/01/1-%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html" rel="alternate" type="text/html" title="关于博客搭建" /><published>2024-08-01T00:00:00+08:00</published><updated>2024-08-01T00:00:00+08:00</updated><id>/2024/08/01/1-%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA</id><content type="html" xml:base="/2024/08/01/1-%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html"><![CDATA[<p>对主题进行了魔改以达到我想要的效果，但是非常简陋。不管了。</p>
+<p>关于上面的假设 $[HX]\gg10^{-7}$：注意到计算结果中 $[HX] &gt; \dfrac{c_0}{2}$，所以只要 $c_0$ 不小得离谱我们的结果还是比较可信的。</p>]]></content><author><name>kyEEcccccc</name></author><category term="高中知识" /><summary type="html"><![CDATA[关于“极稀极易水解”的定量分析。]]></summary></entry><entry><title type="html">关于博客</title><link href="/2024/08/02/1-%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2.html" rel="alternate" type="text/html" title="关于博客" /><published>2024-08-02T00:00:00+08:00</published><updated>2024-08-02T00:00:00+08:00</updated><id>/2024/08/02/1-%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2</id><content type="html" xml:base="/2024/08/02/1-%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2.html"><![CDATA[<p><em>Cipolla 算法及其简要证明</em> 作为网站 LaTeX 和文章分类页面的测试被刊登，目前有计划将我在 cnblogs 上的文章分类整理并<strong>筛选</strong>后登上来，但是这个工作量比较大，且不着急（只需要在 cnblogs 倒闭前做完即可）。</p>
+
+<p><strong>最高指示</strong>：目前我对旧文章日期的看法是采用原本的日期。对于有修订的新旧文章，我认为依然采用第一次正式发布的日期。但是对于大规模增删的段落，采用分割线隔开，并注明修改日期，对于小规模修订采用行内/行间注释的方式标明修订内容。<strong>精神</strong>是保留文章的不同版本，不让人看了云里雾里。</p>
+
+<p><strong>最高指示</strong>：对于删改特别多特别复杂的文章，应该增设新的篇目。新的篇目采用修订时的修改日期。</p>
+
+<p><strong>最高指示</strong>：撤去文章应该在原来位置保留一份说明。<strong>所有涉及 URL 变换的都应当这样做！</strong></p>]]></content><author><name>kyEEcccccc</name></author><summary type="html"><![CDATA[Cipolla 算法及其简要证明 作为网站 LaTeX 和文章分类页面的测试被刊登，目前有计划将我在 cnblogs 上的文章分类整理并筛选后登上来，但是这个工作量比较大，且不着急（只需要在 cnblogs 倒闭前做完即可）。]]></summary></entry><entry><title type="html">关于博客搭建</title><link href="/2024/08/01/1-%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html" rel="alternate" type="text/html" title="关于博客搭建" /><published>2024-08-01T00:00:00+08:00</published><updated>2024-08-01T00:00:00+08:00</updated><id>/2024/08/01/1-%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA</id><content type="html" xml:base="/2024/08/01/1-%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html"><![CDATA[<p>对主题进行了魔改以达到我想要的效果，但是非常简陋。不管了。</p>
 
 <p><strong>最高指示</strong>：随记不能有 <code class="language-plaintext highlighter-rouge">catagories</code> 条目，否则会导致文章分类显示出现问题。</p>
 
