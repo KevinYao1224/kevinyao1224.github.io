@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 一篇关于哥德尔不完备定理的文章之阅读笔记
-categories: 逻辑学/哲学
+categories: 逻辑学与哲学 数学
 ---
 
 ## 参考
@@ -138,7 +138,7 @@ categories: 逻辑学/哲学
 
 接下来我们讨论**证明**的概念。一个公理体系内一个语句 $t$ 的**某个**合法证明（当然，可证语句的证明可以是不唯一的），是一个序列 $\langle s_0,s_1,s_2,\cdots,s_m\rangle$，其中 $s_m=t$，并且对于其中的所有语句，它要么是一个**公理**，要么可以被它之前的某些公理**推导出来**。前者的表示我们已经讨论，而后者也可以用一个表达式来判断，这是因为推理规则同样是递归的。所以我们确实能表示出一个证明，并且判断它的合法性，即存在公式 $\mathrm{bew}(x,y)$ 使得：$n\text{ 编码某个 }t\text{ 的合法证明}\leftrightarrow\mathrm{PA}\vdash\mathrm{bew}(\bar n, G(t))$。
 
-然而，知道了证明的概念还不够，为了构造出不可证命题，哥德尔希望编码出**可证明**的概念。换句话说，希望存在这样的语句 $\mathrm{bwb}(x):=\exists y(\mathrm{bew}(y,x))$。然而，这样的语句很可能是不存在的。虽然如果确实存在证明方法，则我们可以通过枚举 $y$ 并代入 $\mathrm{bew}$ 来找到证明；但是如果证明方法不存在，那么枚举 $y$ 的算法将不能停机。换句话说，可证明命题的集合只保证是**递归可枚举的**，不保证是**递归的**。
+然而，知道了证明的概念还不够，为了构造出不可证命题，哥德尔希望编码出**可证明**的概念。换句话说，希望存在这样的语句 $\mathrm{bwb}(x):=\exists y(\mathrm{bew}(y,x))$。然而，可证明命题的集合只保证是**递归可枚举的**，不保证是**递归的**。所以我们**可以保证**，如果 $t$ 可证，那么 $\mathrm{PA}\vdash \mathrm{bwb}(G(t))$；却**不能保证**，如果 $t$ 不可证，那么 $\mathrm{PA}\not\vdash \mathrm {bwb}(G(t))$，**更不能说** $t$ 不可证时，有 $\mathrm{PA}\vdash\neg\mathrm{bwb}(G(t))$。这将在后面带来隐患。
 
 > 递归可枚举是在说一个集合：
 >
@@ -148,9 +148,9 @@ categories: 逻辑学/哲学
 >
 > 递归可枚举这个名字来源于第三条定义。
 
-> **重要辨析**：$\forall n(T\vdash \varphi(n))$ 与 $T\vdash\forall n(\varphi(n))$ 本质不同，后者比前者强得多。这是因为前一个命题其实是在（$T$ 的）元语言中被描绘的。
+> **重要辨析**：$\forall n(T\vdash \varphi(n))$ 与 $T\vdash\forall n(\varphi(n))$ 本质不同，后者比前者强得多。
 
-哥德尔的证明因为不能完善 $\mathrm{bwb}$，所以必须在某处使用一些关于自然数的语义性质，被一些人批判不够形式化（在纯粹关于语法的定理中引入关于语义的证明）。后面我们会看到它，还会看到另一位逻辑学家 Rosser 给出的纯语法证明。
+接下来，我们正式进入哥德尔的证明。
 
 一阶逻辑的字符串既然**可数**（可以用自然数编码），则我们可以像这样列举出所有**含有恰好一个变元**的表达式（注意在这里一元表达式的**标号**和语句的**哥德尔数**并不是同一个概念）：$\langle\varphi_0(x), \varphi_1(x), \cdots, \varphi_n(x), \cdots\rangle$，基于这个序列又可以构造出**语句序列**： $\langle\varphi_0(\bar0), \varphi_1(\bar1), \cdots, \varphi_n(\bar n), \cdots\rangle$。
 
@@ -158,14 +158,19 @@ categories: 逻辑学/哲学
 
 取 $\psi(x) = \neg\mathrm{bwb}(x)$，对应的 $\sigma$ 记作 $s$。接下来，讨论 $\mathrm{PA}$ 能不能证明 $s$ 或者它的否定。
 
-- 如果 $\mathrm{PA}\vdash s$，那么根据 $\mathrm{bwb}$ 的定义有 $\mathrm{PA}\vdash \mathrm{bwb}(G(s))$，但是根据 $s$ 的定义，又有 $\mathrm {PA}\vdash \varphi(G(s))$ 即 $\mathrm{PA}\vdash\neg\mathrm{bwb}(G(s))$，这是矛盾的，所以 $\mathrm{PA}\not\vdash s$。
-- 如果 $\mathrm{PA}\vdash\neg s$，我们立刻知道 $\mathrm{PA}\vdash \mathrm{bwb}(G(s))$。但是我们能否立刻由此导出 $\mathrm {PA} \vdash s$ 从而导出矛盾呢？**不能**。这是因为我们先前已经发现，完全意义下的 $\mathrm{bwb}(x)$ 这个语句太强了，虽然我们能对于可证语句给出判定，但是对于不可证语句做不到。
+- 如果 $\mathrm{PA}\vdash s$，那么根据 $\mathrm{bwb}$ 的定义有 $\mathrm{PA}\vdash \mathrm{bwb}(G(s))$，但是根据 $s$ 的定义，又有 $\mathrm {PA}\vdash \psi(G(s))$ 即 $\mathrm{PA}\vdash\neg\mathrm{bwb}(G(s))$，这是矛盾的，所以 $\mathrm{PA}\not\vdash s$。
+- 如果 $\mathrm{PA}\vdash\neg s$，我们立刻知道 $\mathrm{PA}\vdash \mathrm{bwb}(G(s))$。但是我们能否立刻由此得出 $\mathrm {PA} \vdash s$ 从而导出矛盾呢？**不能**。这就是上面的隐患爆发的时刻。哥德尔通过引入涉及语义的性质来继续这部分论证，但这事实上需要我们对 $\mathrm{PA}$ 作出更多（元语言中的）断言，从而弱化了他的定理的适用范围。
 
-哥德尔如何解决这个问题呢？他引入了语义，认为：标准自然数模型 $\mathfrak N$ 将会是 $\mathrm{PA}$ 的一个模型，所以当 $\mathrm {PA}\vdash \mathrm{bwb}(G(s))$ 时有 $\mathfrak N \vDash \mathrm{bwb}(G(s))$，即标准自然数兼容这个语句，所以确实存在一个自然数 $n$ 使得 $\mathfrak N\vDash \mathrm {bew}(\bar n,G(s))$，所以 $\mathrm {PA}\not\vdash\neg \mathrm {bew}(\bar n,G(s))$。因为皮亚诺公理体系是自洽的，所以当 $\mathrm{PA}\vdash \neg s$ 时 $\mathrm {PA}\not\vdash s$，而这说明对于所有的自然数 $m$ 都有 $\mathrm {PA}\vdash \neg\mathrm{bew}(\bar m,G(s))$，产生矛盾。
+哥德尔如何解决这个问题呢？他引入了语义，认为：标准自然数模型 $\mathfrak N$ 将会是 $\mathrm{PA}$ 的一个模型，所以当 $\mathrm {PA}\vdash \mathrm{bwb}(G(s))$ 时有 $\mathfrak N \vDash \mathrm{bwb}(G(s))$，即标准自然数兼容这个语句，所以我们认为**确实存在**一个自然数 $n$ 使得 $\mathfrak N\vDash \mathrm {bew}(\bar n,G(s))$，所以 $\mathrm {PA}\not\vdash\neg \mathrm {bew}(\bar n,G(s))$。因为皮亚诺公理体系是自洽的，所以当 $\mathrm{PA}\vdash \neg s$ 时 $\mathrm {PA}\not\vdash s$，而这说明对于所有的自然数 $m$ 都有 $\mathrm {PA}\vdash \neg\mathrm{bew}(\bar m,G(s))$，$m=n$ 时即产生矛盾。
 
-哥德尔通过语义叙述的理论 $T$ 的性质被叫做 $\omega$ 一致性：若 $T\vdash \exists x(\varphi(\bar x))$ 则 $\exists x(T\not\vdash\neg\varphi(\bar x))$。这个叙述和上面的**重要辨析**中的叙述非常相似，不过我们要注意这里的否定是加诸“证明”上的而不是语句本身。这这种性质似乎更弱，也就更有正确的可能。不过说到底，这种断言不是纯语法的，我们需要**相信** $\mathrm{PA}$ 有这种性质。
+哥德尔通过语义叙述的理论 $T$ 的性质被叫做 $\omega$ 一致性：如果对 $T$ 有：若 $T\vdash \exists x(\varphi(\bar x))$ 则 $\exists x(T\not\vdash\neg\varphi(\bar x))$，那么我们说 $T$ 是 $\omega$ 一致的。这个叙述和上面的**重要辨析**中的叙述非常相似，不过我们要注意这里的否定是加诸“证明”上的而不是语句本身。不是所有一致（即自洽）的理论都是 $\omega$ 一致的，所以实际上这弱化了哥德尔的定理。
 
 ### Rosser 的改进
 
-## 塔斯基不可定义定理
+Rosser 对哥德尔证明的改进主要在于将命题 $\mathrm{bwb}$ 替换为了 $\mathrm{prov}(G(t)):=\exists x(\pi(x))$，其中 $\pi(x):=\mathrm{bew}(x,G(t))\wedge \forall y<x(\neg \mathrm{bew}(y,G(\neg t)))$。用直观的话来说，$\mathrm{prov}$ 是在说：存在一种 $t$ 的证明，且在它之前的命题都没有证明 $t$ 的否定。根据皮亚诺公理体系的自洽性，当 $t$ 确实可证时，这一语句与 $\mathrm{bwb}$ 本质相同，有 $\mathrm{PA}\vdash \mathrm{prov(G(t))}$。它的巧妙性体现在否定意义下。像上文中那样，以下令 $\psi(x) = \neg \mathrm{prov}(x)$，$s$ 是它对应的自指语句：
+
+- 如果 $\mathrm{PA}\vdash s$，同上矛盾。
+- 如果 $\mathrm{PA}\vdash \neg s$，那么根据 $s$ 的定义，$\mathrm{PA}\vdash \mathrm{prov}(G(s))$。同时，存在自然数 $m$，使得 $\mathrm{PA}\vdash \mathrm{bew}(\bar m,G(\neg s))$，这是根据 $\mathrm{bew}$ 的定义。综合这两点，我们知道 $\mathrm{PA}\vdash \forall n>m(\neg\pi(n))$，因为 $\wedge$ 符号的后项总是不成立。除此之外，因为 $\forall n\leq m(PA\vdash \neg\mathrm{bew}(\bar n,G(t)))$，所以 $PA\vdash \forall n\leq m(\neg\mathrm{bew}(n,G(t)))$。我们得以这样推理，是因为 $n\leq m$ 表达的语句数是有限的，只要依次证明即可。
+
+Rosser 的证明通过在证否处“截止”，避免了“可证性”的概念在需要验证的潜在证明总数推向无穷时产生的问题，因此它只要求理论具有自洽性，这大大推广了哥德尔不完备定理的适用范围。
 
