@@ -1,4 +1,4 @@
 ---
 layout: home
-title: 【推荐阅读】
+title: 推荐阅读
 ---

@@ -33,8 +33,9 @@ social:
   github: KevinYao1224
 theme_setting:
   nav_pages:
-    - "notes.markdown"
     - "articles.markdown"
+    - "short-articles.markdown"
+    - "notes.markdown"
     - "about-me.markdown"
 
 # Build settings
@@ -69,3 +70,6 @@ exclude:
   - vendor/ruby/
   - elementary/
   - ignore/
+  - _posts/文章/mod.markdown
+  - _posts/短文/mod.markdown
+  - _posts/随记/mod.markdown
