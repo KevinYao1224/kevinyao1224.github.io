@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 一篇关于哥德尔不完备定理的文章之阅读笔记
-categories: 逻辑学与哲学 数学
+categories: 数学
 top: true
 ---
 
