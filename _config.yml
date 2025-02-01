@@ -73,3 +73,4 @@ exclude:
   - _posts/文章/mod.markdown
   - _posts/短文/mod.markdown
   - _posts/随记/mod.markdown
+  - _posts/drafts
