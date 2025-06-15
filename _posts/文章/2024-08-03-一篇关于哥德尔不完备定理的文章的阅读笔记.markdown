@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 一篇关于哥德尔不完备定理的文章之阅读笔记
+title: 一篇关于哥德尔不完备定理的文章的阅读笔记
 categories: 数学
 top: true
 ---

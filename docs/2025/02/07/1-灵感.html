@@ -2,7 +2,7 @@
 <html lang="zh"><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content=""><title>极稀极易水解 | kyEEcccccc 的枢纽</title>
+  <meta name="author" content=""><title>灵感 | kyEEcccccc 的枢纽</title>
   <meta name="keywords" content="">
   <meta name="description" content=""><link rel="stylesheet" href="/assets/main.css?v=0.3.3" />
 <script src="/assets/main.js?v=0.3.3" defer></script><script type="text/x-mathjax-config">
@@ -19,7 +19,7 @@
 <script type="text/javascript" async 
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
 </head>
-<body class="body-page">
+<body class="body-post">
     <a href="/" class="logo"><h1>kyEEcccccc 的枢纽</h1>
 </a><main class="post__wrapper"><nav class="top-nav">
 
@@ -35,48 +35,29 @@
 <a href="/about-me/" class="nav-link ">关于我</a>
 
 
-</nav><article class="post">
+</nav><div class="post__top_navs clearfix">
+    <nav class="post__archive_path"><!-- <a href="" id="archiveBtn"> -->
+      <a href=/notes/ id="archiveBtn">
+        <div class="post__archive_icon">
+          <svg width="40" height="40">
+            <circle class="circle-progress" r="18" cy="20" cx="20"  stroke-linejoin="round" stroke-linecap="round" />
+          </svg>
+          <span class="post__archive_icon"></span>
+        </div>
+        <!-- kyEEcccccc 的枢纽 -->
+        返回
+      </a>
+    </nav>
+  </div>
+  <article class="post">
     <header class="post__header">
-      <h1 class="post__title page__title">极稀极易水解</h1>
+      <h1 class="post__title">灵感</h1>
+      <div class="post__meta">
+        <time>2025-02-07 00:00</time>
+      </div>
     </header>
     <div class="post__content content">
-      <p>关于“极稀极易水解”的定量分析。</p>
-
-<p>考虑一元酸 $HX$ 和它的钠盐（强电解质）$NaX$，现在室温水溶液中 $NaX$ 浓度为 $c_0$，分析离子浓度。主要是比较 $[HX]$ 和 $[X^-]$。</p>
-
-<div class="kdmath">$$
-\begin{cases}
-c_0 = [X^-] + [HX]\\
-[OH^-] = [H^+] + [HX]\\
-\dfrac{[H^+][X^-]}{[HX]} = K_a\\
-[H^+][OH^-] = K_w = 10^{-14}\\
-\end{cases}
-$$</div>
-
-<p>我们首先注意到：$[H^+] &lt; [OH^-]$（第二行），所以 $[H^+] &lt; 10^{-7}$（第四行）。这浓度相当小。不妨认为 $[HX] \gg 10^{-7}$（这是普遍存在的），那么在第二行我们可以近似认为 $[OH^-] = [HX]$。设 $[HX] = x$，将一二四行全部代入第三行。令 $k = \dfrac{K_w}{K_a}$ 为酸根离子的水解常数。</p>
-
-<div class="kdmath">$$
-\begin{aligned}
-&\dfrac{c_0-x}{x^2} = \frac{1}{k}\\
-\iff&f(x) = x^2+kx-kc_0 = 0\\
-\end{aligned}
-$$</div>
-
-<p>不难发现我们希望找到它满足 $x&gt;0$ 的零点 $x_0$：</p>
-
-<div class="kdmath">$$
-\begin{aligned}
-x_0 > \frac{c_0}{2}&\iff f(\frac {c_0}2) < 0\\
-&\iff \frac{c_0^2}4+\frac{kc_0}{2}-kc_0<0\\
-&\iff c_0 < 2k\\
-\end{aligned}
-$$</div>
-
-<p>此时有 $[HX] &gt; [X^-]$。</p>
-
-<p>也即当<strong>加入的盐浓度小于对应一元酸根水解常数的两倍</strong>时，认为“极稀极易水解”成立。</p>
-
-<p>关于上面的假设 $[HX]\gg10^{-7}$：注意到计算结果中 $[HX] &gt; \dfrac{c_0}{2}$，所以只要 $c_0$ 不小得离谱我们的结果还是比较可信的。</p>
+      <p>某一天人类和一个外星文明接触，他们宣称自己已经实现了某种进化。随后人类发现这是一个古老文明在创造更高级智能体后自身种族毁灭，文明衰败的结果。如今与人类接触的种族是类似机器仆从一样的存在，但他们宣称自己是那个没落种族的延续。</p>
 
     </div>
   </article><aside class="post__contact"><h4><a href="">kyEEcccccc</a></h4>

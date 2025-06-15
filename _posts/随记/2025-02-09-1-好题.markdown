@@ -1,0 +1,21 @@
+---
+layout: post
+title: 好题
+type: note
+back: /notes/
+---
+
+> 是否存在函数 $f,g:\mathbb R\to\mathbb R$，使得 $f\circ g$ 严格减而 $g\circ f$ 严格增？
+
+存在。例如：
+
+$$
+f(x) = \begin{cases}
+x, \text{when }|x|\in[2^{2n-1},2^{2n});\\
+-x, \text{when }|x|\in[2^{2n},2^{2n+1});\\
+0, \text{when }x=0.
+\end{cases}\\
+g(x) = 2f(x)
+$$
+
+容易验证 $f(g(x)) = -2x,g(f(x)) = 2x$，符合题意。
