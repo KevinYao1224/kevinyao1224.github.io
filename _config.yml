@@ -34,7 +34,7 @@ social:
 theme_setting:
   nav_pages:
     - "index.markdown"
-    - "articles.markdown"
+    - "categories.markdown"
     - "about-me.markdown"
 
 # Build settings

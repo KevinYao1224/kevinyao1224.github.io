@@ -1,6 +1,7 @@
 ---
 layout: page
 title: SG 定理与反常游戏
+permalink: archive/2025/07/20/SG-定理与反常游戏
 categories: XCPC 博弈论
 excerpt: 从零开始推导出 SG 定理.
 ---
