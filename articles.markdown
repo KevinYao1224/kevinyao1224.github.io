@@ -1,5 +1,5 @@
 ---
-layout: blog-pages-only
-title: 文章
+layout: blog
+title: 分类
 permalink: /articles/
 ---
