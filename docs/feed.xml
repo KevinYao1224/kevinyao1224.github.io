@@ -1,4 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-07-20T16:00:53+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">kyEEcccccc 的枢纽</title><subtitle></subtitle><author><name>kyEEcccccc</name></author><entry><title type="html">SG 定理与反常游戏</title><link href="http://localhost:4000/archive/2025/07/20/SG-%E5%AE%9A%E7%90%86%E4%B8%8E%E5%8F%8D%E5%B8%B8%E6%B8%B8%E6%88%8F" rel="alternate" type="text/html" title="SG 定理与反常游戏" /><published>2025-07-20T00:00:00+08:00</published><updated>2025-07-20T00:00:00+08:00</updated><id>http://localhost:4000/archive/2025/07/20/SG%20%E5%AE%9A%E7%90%86%E4%B8%8E%E5%8F%8D%E5%B8%B8%E6%B8%B8%E6%88%8F</id><content type="html" xml:base="http://localhost:4000/archive/2025/07/20/SG-%E5%AE%9A%E7%90%86%E4%B8%8E%E5%8F%8D%E5%B8%B8%E6%B8%B8%E6%88%8F"><![CDATA[<h2 id="公平组合游戏与有向图游戏">公平组合游戏与有向图游戏</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-07-25T23:03:26+08:00</updated><id>/feed.xml</id><title type="html">kyEEcccccc 的枢纽</title><subtitle></subtitle><author><name>kyEEcccccc</name></author><entry><title type="html">笔记: 强周期引理</title><link href="/archive/2025/7/25/%E7%AC%94%E8%AE%B0-%E5%BC%BA%E5%91%A8%E6%9C%9F%E5%BC%95%E7%90%86" rel="alternate" type="text/html" title="笔记: 强周期引理" /><published>2025-07-25T00:00:00+08:00</published><updated>2025-07-25T00:00:00+08:00</updated><id>/archive/2025/7/25/%E7%AC%94%E8%AE%B0-%E5%BC%BA%E5%91%A8%E6%9C%9F%E5%BC%95%E7%90%86</id><content type="html" xml:base="/archive/2025/7/25/%E7%AC%94%E8%AE%B0-%E5%BC%BA%E5%91%A8%E6%9C%9F%E5%BC%95%E7%90%86"><![CDATA[<h2 id="符号约定">符号约定</h2>
+
+<ul>
+  <li>$[n] = \mathbb{Z}\cap [1,n] (n\in \mathbb{Z}^+)$.</li>
+</ul>
+
+<h2 id="border-与周期">Border 与周期</h2>
+
+<p>一个字符串的一个 Border, 是指它的一个真前缀, 这个真前缀与它的同样长度的真后缀完全相同. 同时, 有时也指某个 Border 的长度.</p>
+
+<p>一个长度为 $n$ 的字符串 $s$ 的周期, 是指一个整数 $k(1\le k &lt; n)$, 使得 $\forall i\in [n - k], \text{有 }s_i = s_{i+k}$. 同时, 有时也指长度为 $k$ 的前缀或后缀. 真周期是说这个周期的同时还整除 $n$.</p>
+
+<p>不难发现, 一个周期的补是一个 Border, 一个 Border 的补是一个周期. 所以, 研究周期就是研究 Border, 研究 Border 就是研究周期.</p>
+
+<h2 id="弱周期引理weak-periodicity-lemma">弱周期引理(Weak Periodicity Lemma)</h2>
+
+<p>如果长度为 $n$ 的字符串 $s$ 有两个周期 $a, b(a &lt; b)$, 这两个周期会产生什么相互作用呢?</p>
+
+<blockquote>
+  <p>弱周期引理:</p>
+
+  <p>对于 $s$ 的两个周期 $a, b$, 如果 $a + b \le n$, 那么 $\gcd(a, b)$ 也是 $s$ 的一个周期.</p>
+</blockquote>
+
+<p>这是因为, 如果 $a + b\le n$, 那么 $\forall i\in [n - b + a], \text{有 } i + b\le n \lor i - a\ge 1$, 所以要么 $s_i = s_{i + b} = s_{i + b - a}$, 要么 $s_i = s_{i - a} = s_{i - a + b}$, 所以 $b - a$ 也是 $s$ 的一个周期.</p>
+
+<p>显然, 运用数学归纳法, 结合欧几里得算法的知识, 不难证明 $\gcd(a, b)$ 也是 $s$ 的一个周期.</p>
+
+<h2 id="强周期引理strong-periodicity-lemma">(强)周期引理((Strong) Periodicity Lemma)</h2>
+
+<p>强周期引理改进了上述定理中不等式的界.</p>
+
+<blockquote>
+  <p>(强)周期引理:</p>
+
+  <p>对于 $s$ 的两个周期 $a, b$, 如果 $a + b - \gcd(a, b) \le n$, 那么 $\gcd(a, b)$ 也是 $s$ 的一个周期.</p>
+</blockquote>
+
+<p>强周期引理有许多证明方法. 这里给出最典范的一个.</p>
+
+<p>考虑将 $\mathbb{Z}^+$ 按照 ${} \bmod a$ 的余数分类, 那么会有 $a$ 类. 结合周期为 $b$ 的限制, 也就是会进行 $n - b$ 次合并, 每次将 $i \bmod a$ 和 $(i + b) \bmod a$ 的等价类合并($1\le i\le n - b$). 如果 $n \to +\infty$, 显然, 最终只会剩下 $\gcd(a, b)$ 个等价类, 这是弱周期引理向我们指出的. 强周期引理就是要探究, $n$ 最少是多少时, 所有能合并的等价类一定都合并完了. 这个值记作 $n_0$</p>
+
+<p>不难发现, 因为每次至多使等价类的个数减少 $1$, 所以, 至少需要 $a - \gcd(a, b)$ 次合并, 所以 $n - b \ge a - \gcd(a, b)$, 所以 $a + b - \gcd(a, b) \le n$. 也就是说, 强周期引理给出的不等式左式是 $n_0$ 的一个下界. 如果强周期引理成立, 那么它同时也是 $n_0$ 的一个上界.</p>
+
+<p>将 $\mathbb{Z}\cap[0, a)$ 按照 ${} \bmod \gcd(a, b)$ 的值划分等价类. 对于每个等价类内部的点, 我们考虑在 $x$ 与 $(x + b) \bmod a$ 之间连边, 这样, 每个等价类形如一个环, 这个环的大小是 $\frac{a}{\gcd(a, b)}$. 现在, 对于所有 $i\in [n_0 - b] = [a + b - \gcd(a, b) - b] = [a - \gcd(a, b)]$, 我们将 $i \bmod a$ 和 $(i + b) \bmod a$ 对应的边合并. 显然, 在每个环上这等同于从一条边开始依次向后合并, 总的合并次数是 $\frac{a - \gcd(a, b)}{\gcd(a, b)} = \frac{a}{\gcd(a, b)} - 1$. 所以, 每个环都恰好被合并为了一个点. 所以只要 $n\ge n_0$, 就可以说明 $\gcd(a, b)$ 也是 $s$ 的一个周期.</p>]]></content><author><name>kyEEcccccc</name></author><category term="XCPC" /><category term="字符串" /><summary type="html"><![CDATA[强周期引理的典范证明]]></summary></entry><entry><title type="html">SG 定理与反常游戏</title><link href="/archive/2025/07/20/SG-%E5%AE%9A%E7%90%86%E4%B8%8E%E5%8F%8D%E5%B8%B8%E6%B8%B8%E6%88%8F" rel="alternate" type="text/html" title="SG 定理与反常游戏" /><published>2025-07-20T00:00:00+08:00</published><updated>2025-07-20T00:00:00+08:00</updated><id>/archive/2025/07/20/SG%20%E5%AE%9A%E7%90%86%E4%B8%8E%E5%8F%8D%E5%B8%B8%E6%B8%B8%E6%88%8F</id><content type="html" xml:base="/archive/2025/07/20/SG-%E5%AE%9A%E7%90%86%E4%B8%8E%E5%8F%8D%E5%B8%B8%E6%B8%B8%E6%88%8F"><![CDATA[<h2 id="公平组合游戏与有向图游戏">公平组合游戏与有向图游戏</h2>
 
 <p>公平组合游戏是这样的二人游戏:</p>
 
