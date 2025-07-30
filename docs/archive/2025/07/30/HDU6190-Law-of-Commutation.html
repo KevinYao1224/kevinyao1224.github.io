@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content=""><title>HDU6190 Law of Commutation | kyEEcccccc 的枢纽</title>
+  <meta name="keywords" content="">
+  <meta name="description" content=""><link rel="stylesheet" href="/assets/main.css?v=0.3.3" />
+<script src="/assets/main.js?v=0.3.3" defer></script>
+        <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    TeX: {
+        equationNumbers: {
+            autoNumber: "AMS"
+        }
+    },
+    tex2jax: {
+        inlineMath: [ ['$','$'] ],
+        displayMath: [ ['$$','$$'] ],
+        processEscapes: true,
+    }
+});
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  
+  <style>
+	.post__content {
+	text-align: left;
+	}
+  </style>
+</head>
+<body class="body-page">
+    <a href="/" class="logo"><h1>kyEEcccccc 的枢纽</h1>
+</a><main class="post__wrapper"><nav class="top-nav">
+
+<a href="/" class="nav-link ">主页</a>
+
+
+<a href="/categories/" class="nav-link ">分类</a>
+
+
+<a href="/about-me/" class="nav-link ">关于我</a>
+
+
+</nav><article class="post">
+    <header class="post__header">
+      <h1 class="post__title page__title">HDU6190 Law of Commutation</h1>
+    </header>
+    <div class="post__content content">
+      <blockquote>
+  <p>参考:</p>
+
+  <ul>
+    <li><a href="https://blog.csdn.net/V5ZSQ/article/details/79325038">https://blog.csdn.net/V5ZSQ/article/details/79325038</a></li>
+    <li><a href="https://www.codeleading.com/article/49961848995">https://www.codeleading.com/article/49961848995</a></li>
+  </ul>
+</blockquote>
+
+<p>不难想到分奇偶讨论.</p>
+
+<p>如果 $a$ 是奇数. 那么 $b$ 也应该是奇数.</p>
+
+<p>因为 $a$ 是奇数, 所以 $a^2 \equiv 1 \pmod {2^3}$, 所以 $a^b \equiv a \pmod {2^3}$. 同理, $b^a \equiv b \pmod {2^3}$, 所以 $a \equiv b \pmod {2^3}$.</p>
+
+<p>因为 $a^b \equiv a^{b \bmod 2^3} \pmod {2^4}$, 且同理 $b^a \equiv b^{a \bmod 2^3} \equiv b^{b \bmod 2^3} \pmod {2^4}$, 所以 $(ab^{-1})^{b \bmod 2^3} \equiv 1 \pmod {2^4}$. 假设 $ab^{-1} \not\equiv 1 \pmod {2^4}$, 那么 $\vert ab^{-1}\vert \vert 2^3$, 所以它是一个偶数, 而 $b \bmod 2^3$ 是一个奇数, 所以不可能使得 $\vert ab^{-1}\vert\vert b \bmod 2^3$, 所以矛盾. 所以, $ab^{-1} \equiv 1 \pmod {2^4}$, 所以 $a \equiv b \pmod {2^4}$.</p>
+
+<p>重复上面的过程, 用数学归纳法, 可以证明 $a \equiv b \pmod {2^n}$. 所以, 当 $a$ 为奇数时, 答案是 $1$.</p>
+
+<p>如果 $a$ 是偶数, 那么 $b$ 也是偶数. 如果 $1 \le b \le n$, 那么 $b$ 只有很少的可能性, 暴力枚举即可.</p>
+
+<p>如果 $n &lt; b \le 2^n$, 那么 $a^b \equiv 0 \pmod {2^n}$. 所以我们只关心在 $(n, 2^n]$ 中有多少整数 $b$ 满足 $b^a\equiv 0 \pmod {2^n}$. 显然, 假设 $x$ 的质因子 $2$ 的指数是 $c_2(x)$, 那么这一限制就是说 $c_2(b) \ge \left\lceil\frac{n}{a}\right\rceil$, 也就是说 $\left.2^{\left\lceil\frac{n}{a}\right\rceil}\right\vert b$. 这是非常好求的.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Author: kyEEcccccc</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">using</span> <span class="n">LL</span> <span class="o">=</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">ULL</span> <span class="o">=</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">;</span>
+
+<span class="cp">#define F(i, l, r) for (int i = (l); i &lt;= (r); ++i)
+#define FF(i, r, l) for (int i = (r); i &gt;= (l); --i)
+#define MAX(a, b) ((a) = max(a, b))
+#define MIN(a, b) ((a) = min(a, b))
+#define SZ(a) ((int)((a).size()) - 1)
+</span>
+<span class="kt">int</span> <span class="nf">kpow_mod</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">n</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">x</span> <span class="o">&amp;=</span> <span class="n">m</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">k</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span> <span class="n">r</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="n">x</span> <span class="o">&amp;</span> <span class="n">m</span><span class="p">;</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">&amp;</span> <span class="n">m</span><span class="p">;</span>
+        <span class="n">k</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">r</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">signed</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// freopen(".in", "r", stdin);</span>
+    <span class="c1">// freopen(".out", "w", stdout);</span>
+    <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">);</span>
+
+    <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">tot</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">F</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">kpow_mod</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="n">kpow_mod</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+                <span class="p">{</span>
+                    <span class="o">++</span><span class="n">tot</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">tot</span> <span class="o">+</span> <span class="p">((</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">n</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+    </div>
+  </article><aside class="post__contact"><h4><a href="">kyEEcccccc</a></h4>
+  
+<div class="icon__list"><a href="mailto:3044923282@qq.com" class="icon__link" target="_blank"><svg class="icon__stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+  <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a><a href="https://github.com/KevinYao1224" class="icon__link" target="_blank"><svg viewBox="0 0 64 64" class="icon__fill">
+  <path stroke-width="0" d="M32 0 C14 0 0 14 0 32 0 53 19 62 22 62 24 62 24 61 24 60 L24 55 C17 57 14 53 13 50 13 50 13 49 11 47 10 46 6 44 10 44 13 44 15 48 15 48 18 52 22 51 24 50 24 48 26 46 26 46 18 45 12 42 12 31 12 27 13 24 15 22 15 22 13 18 15 13 15 13 20 13 24 17 27 15 37 15 40 17 44 13 49 13 49 13 51 20 49 22 49 22 51 24 52 27 52 31 52 42 45 45 38 46 39 47 40 49 40 52 L40 60 C40 61 40 62 42 62 45 62 64 53 64 32 64 14 50 0 32 0 Z" />
+</svg>
+</a></div>
+</aside>
+</main><footer class="site-footer">
+  © 2025<a href="/">kyEEcccccc 的枢纽</a>. Theme<a href="https://github.com/erlzhang/jekyll-theme-persephone" target="_blank">Persephone</a>
+</footer>
+
+  </body>
+</html>
