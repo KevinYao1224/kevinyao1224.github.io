@@ -2,7 +2,7 @@
 layout: page
 title: SG 定理与反常游戏
 permalink: archive/2025/07/20/SG-定理与反常游戏
-categories: XCPC 博弈论
+categories: XCPC
 excerpt: 从零开始推导出 SG 定理.
 ---
 
@@ -34,7 +34,7 @@ excerpt: 从零开始推导出 SG 定理.
 
 如果有一系列有向图游戏 $G_1, G_2, \cdots G_n$, 定义这些游戏的和: $\bigoplus\limits_{i=1}^{n} G_n$ 是这样的游戏: 每次玩家可以任意选择一个 $k\in [n]$, 在 $G_k$ 中进行一次行动(如果 $G_k$ 中有合法行动). 无法行动的玩家失败.
 
-容易发现, 有向图游戏的和还是公平组合游戏, 对应的有向图游戏就是所有图的笛卡尔积所构成的有向图游戏. 设有向图游戏 $G$ 对应的图的大小是 $\| G\|$, 那么$\left\|\bigoplus\limits_{i=1}^{n}G_i\right\| = \prod\limits_{i=1}^{n}\| G_i\|$. 显然, 在实践中, 很难运用这种方法来判断游戏的和的胜负性质.
+容易发现, 有向图游戏的和还是公平组合游戏, 对应的有向图游戏就是所有图的笛卡尔积所构成的有向图游戏. 设有向图游戏 $G$ 对应的图的大小是 $\vert G\vert$, 那么$\left\vert\bigoplus\limits_{i=1}^{n}G_i\right\vert = \prod\limits_{i=1}^{n}\vert G_i\vert$. 显然, 在实践中, 很难运用这种方法来判断游戏的和的胜负性质.
 
 ### 探索游戏的和的胜负性质
 
