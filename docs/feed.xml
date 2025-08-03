@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-07-30T22:13:51+08:00</updated><id>/feed.xml</id><title type="html">kyEEcccccc 的枢纽</title><subtitle></subtitle><author><name>kyEEcccccc</name></author><entry><title type="html">HDU6190 Law of Commutation</title><link href="/archive/2025/07/30/HDU6190-Law-of-Commutation" rel="alternate" type="text/html" title="HDU6190 Law of Commutation" /><published>2025-07-30T00:00:00+08:00</published><updated>2025-07-30T00:00:00+08:00</updated><id>/archive/2025/07/30/HDU6190-Law-of-Commutation</id><content type="html" xml:base="/archive/2025/07/30/HDU6190-Law-of-Commutation"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-08-03T15:02:33+08:00</updated><id>/feed.xml</id><title type="html">kyEEcccccc 的枢纽</title><subtitle></subtitle><author><name>kyEEcccccc</name></author><entry><title type="html">HDU6190 Law of Commutation</title><link href="/archive/2025/07/30/HDU6190-Law-of-Commutation" rel="alternate" type="text/html" title="HDU6190 Law of Commutation" /><published>2025-07-30T00:00:00+08:00</published><updated>2025-07-30T00:00:00+08:00</updated><id>/archive/2025/07/30/HDU6190-Law-of-Commutation</id><content type="html" xml:base="/archive/2025/07/30/HDU6190-Law-of-Commutation"><![CDATA[<blockquote>
   <p>参考:</p>
 
   <ul>
@@ -77,17 +77,11 @@
     
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div>]]></content><author><name>kyEEcccccc</name></author><category term="XCPC" /><summary type="html"><![CDATA[解数论方程 $a^b \equiv b^a \pmod{2^n}$]]></summary></entry><entry><title type="html">笔记: 强周期引理</title><link href="/archive/2025/7/25/%E7%AC%94%E8%AE%B0-%E5%BC%BA%E5%91%A8%E6%9C%9F%E5%BC%95%E7%90%86" rel="alternate" type="text/html" title="笔记: 强周期引理" /><published>2025-07-25T00:00:00+08:00</published><updated>2025-07-25T00:00:00+08:00</updated><id>/archive/2025/7/25/%E7%AC%94%E8%AE%B0-%E5%BC%BA%E5%91%A8%E6%9C%9F%E5%BC%95%E7%90%86</id><content type="html" xml:base="/archive/2025/7/25/%E7%AC%94%E8%AE%B0-%E5%BC%BA%E5%91%A8%E6%9C%9F%E5%BC%95%E7%90%86"><![CDATA[<h2 id="符号约定">符号约定</h2>
-
-<ul>
-  <li>$[n] = \mathbb{Z}\cap [1,n] (n\in \mathbb{Z}^+)$.</li>
-</ul>
-
-<h2 id="border-与周期">Border 与周期</h2>
+</code></pre></div></div>]]></content><author><name>kyEEcccccc</name></author><category term="XCPC" /><summary type="html"><![CDATA[解数论方程 $a^b \equiv b^a \pmod{2^n}$]]></summary></entry><entry><title type="html">笔记: 强周期引理</title><link href="/archive/2025/7/25/%E7%AC%94%E8%AE%B0-%E5%BC%BA%E5%91%A8%E6%9C%9F%E5%BC%95%E7%90%86" rel="alternate" type="text/html" title="笔记: 强周期引理" /><published>2025-07-25T00:00:00+08:00</published><updated>2025-07-25T00:00:00+08:00</updated><id>/archive/2025/7/25/%E7%AC%94%E8%AE%B0-%E5%BC%BA%E5%91%A8%E6%9C%9F%E5%BC%95%E7%90%86</id><content type="html" xml:base="/archive/2025/7/25/%E7%AC%94%E8%AE%B0-%E5%BC%BA%E5%91%A8%E6%9C%9F%E5%BC%95%E7%90%86"><![CDATA[<h2 id="border-与周期">Border 与周期</h2>
 
 <p>一个字符串的一个 Border, 是指它的一个真前缀, 这个真前缀与它的同样长度的真后缀完全相同. 同时, 有时也指某个 Border 的长度.</p>
 
-<p>一个长度为 $n$ 的字符串 $s$ 的周期, 是指一个整数 $k(1\le k &lt; n)$, 使得 $\forall i\in [n - k], \text{有 }s_i = s_{i+k}$. 同时, 有时也指长度为 $k$ 的前缀或后缀. 真周期是说这个周期的同时还整除 $n$.</p>
+<p>一个长度为 $n$ 的字符串 $s$ 的周期, 是指一个整数 $k(1\le k &lt; n)$, 使得 $\forall i\in [n - k], \text{有 }s_i = s_{i+k}$. 同时, 有时也指长度为 $k$ 的前缀或后缀. 真周期是说一个周期同时还整除 $n$.</p>
 
 <p>不难发现, 一个周期的补是一个 Border, 一个 Border 的补是一个周期. 所以, 研究周期就是研究 Border, 研究 Border 就是研究周期.</p>
 
@@ -117,82 +111,96 @@
 
 <p>强周期引理有许多证明方法. 这里给出最典范的一个.</p>
 
-<p>考虑将 $\mathbb{Z}^+$ 按照 ${} \bmod a$ 的余数分类, 那么会有 $a$ 类. 结合周期为 $b$ 的限制, 也就是会进行 $n - b$ 次合并, 每次将 $i \bmod a$ 和 $(i + b) \bmod a$ 的等价类合并($1\le i\le n - b$). 如果 $n \to +\infty$, 显然, 最终只会剩下 $\gcd(a, b)$ 个等价类, 这是弱周期引理向我们指出的. 强周期引理就是要探究, $n$ 最少是多少时, 所有能合并的等价类一定都合并完了. 这个值记作 $n_0$</p>
+<p>首先分析强周期引力的实质. 考虑将 $\mathbb{Z}^+$ 按照 ${} \bmod a$ 的余数分类, 那么会有 $a$ 类. 结合周期为 $b$ 的限制, 也就是会进行 $n - b$ 次合并, 每次将 $i \bmod a$ 和 $(i + b) \bmod a$ 所属的等价类合并($1\le i\le n - b$). 如果 $n$ 充分大, 显然, 最终只会剩下 $\gcd(a, b)$ 个等价类, 这正是弱周期引理向我们指出的. 强周期引理就是要探究, $n$ 最少是多少时, 所有能合并的等价类一定都合并完了. 这个值记作 $n_0$.</p>
 
-<p>不难发现, 因为每次至多使等价类的个数减少 $1$, 所以, 至少需要 $a - \gcd(a, b)$ 次合并, 所以 $n - b \ge a - \gcd(a, b)$, 所以 $a + b - \gcd(a, b) \le n$. 也就是说, 强周期引理给出的不等式左式是 $n_0$ 的一个下界. 如果强周期引理成立, 那么它同时也是 $n_0$ 的一个上界.</p>
+<p>不难发现, 因为每次至多使等价类的个数减少 $1$, 所以, 至少需要 $a - \gcd(a, b)$ 次合并, 所以 $n - b \ge a - \gcd(a, b)$, 所以 $a + b - \gcd(a, b) \le n$. 也就是说, 强周期引理给出的不等式左式是 $n_0$ 的一个下界. 如果强周期引理成立, 那么它同时也是 $n_0$ 的一个上界. 下面, 我们具体地给出证明.</p>
 
-<p>将 $\mathbb{Z}\cap[0, a)$ 按照 ${} \bmod \gcd(a, b)$ 的值划分等价类. 对于每个等价类内部的点, 我们考虑在 $x$ 与 $(x + b) \bmod a$ 之间连边, 这样, 每个等价类形如一个环, 这个环的大小是 $\frac{a}{\gcd(a, b)}$. 现在, 对于所有 $i\in [n_0 - b] = [a + b - \gcd(a, b) - b] = [a - \gcd(a, b)]$, 我们将 $i \bmod a$ 和 $(i + b) \bmod a$ 对应的边合并. 显然, 在每个环上这等同于从一条边开始依次向后合并, 总的合并次数是 $\frac{a - \gcd(a, b)}{\gcd(a, b)} = \frac{a}{\gcd(a, b)} - 1$. 所以, 每个环都恰好被合并为了一个点. 所以只要 $n\ge n_0$, 就可以说明 $\gcd(a, b)$ 也是 $s$ 的一个周期.</p>]]></content><author><name>kyEEcccccc</name></author><category term="XCPC" /><summary type="html"><![CDATA[强周期引理的典范证明]]></summary></entry><entry><title type="html">SG 定理与反常游戏</title><link href="/archive/2025/07/20/SG-%E5%AE%9A%E7%90%86%E4%B8%8E%E5%8F%8D%E5%B8%B8%E6%B8%B8%E6%88%8F" rel="alternate" type="text/html" title="SG 定理与反常游戏" /><published>2025-07-20T00:00:00+08:00</published><updated>2025-07-20T00:00:00+08:00</updated><id>/archive/2025/07/20/SG-%E5%AE%9A%E7%90%86%E4%B8%8E%E5%8F%8D%E5%B8%B8%E6%B8%B8%E6%88%8F</id><content type="html" xml:base="/archive/2025/07/20/SG-%E5%AE%9A%E7%90%86%E4%B8%8E%E5%8F%8D%E5%B8%B8%E6%B8%B8%E6%88%8F"><![CDATA[<h2 id="公平组合游戏与有向图游戏">公平组合游戏与有向图游戏</h2>
+<p>将 $\mathbb{Z}\cap[0, a)$ 按照 ${} \bmod \gcd(a, b)$ 的余数分类. 对于每个等价类内部的点, 我们考虑在 $x$ 与 $(x + b) \bmod a$ 之间连边, 这样, 每个等价类内部的连边会形成一个环, 环的大小即等价类的大小 $\frac{a}{\gcd(a, b)}$.</p>
+
+<p>现在, 对于所有 $i\in [n_0 - b] = [a + b - \gcd(a, b) - b] = [a - \gcd(a, b)]$, 我们将 $i \bmod a$ 和 $(i + b) \bmod a$ 对应的边合并. 显然, 在每个环上这等同于从一条边开始依次向后合并, 总的合并次数是 $\frac{a - \gcd(a, b)}{\gcd(a, b)} = \frac{a}{\gcd(a, b)} - 1$. 所以这样以后, 每个环都被合并为了一个点. 所以只要 $n\ge a + b - \gcd(a, b)$, 就可以说明 $\gcd(a, b)$ 也是 $s$ 的一个周期, 于是强周期引理得到证明.</p>]]></content><author><name>kyEEcccccc</name></author><category term="XCPC" /><summary type="html"><![CDATA[强周期引理的典范证明]]></summary></entry><entry><title type="html">SG 定理与反常游戏</title><link href="/archive/2025/07/20/SG-%E5%AE%9A%E7%90%86%E4%B8%8E%E5%8F%8D%E5%B8%B8%E6%B8%B8%E6%88%8F" rel="alternate" type="text/html" title="SG 定理与反常游戏" /><published>2025-07-20T00:00:00+08:00</published><updated>2025-07-20T00:00:00+08:00</updated><id>/archive/2025/07/20/SG-%E5%AE%9A%E7%90%86%E4%B8%8E%E5%8F%8D%E5%B8%B8%E6%B8%B8%E6%88%8F</id><content type="html" xml:base="/archive/2025/07/20/SG-%E5%AE%9A%E7%90%86%E4%B8%8E%E5%8F%8D%E5%B8%B8%E6%B8%B8%E6%88%8F"><![CDATA[<h2 id="公平组合游戏与有向图游戏">公平组合游戏与有向图游戏</h2>
 
 <p>公平组合游戏是这样的二人游戏:</p>
 
 <ul>
   <li>玩家轮流行动.</li>
   <li>任何时刻, 游戏的双方知道关于游戏的所有信息.</li>
-  <li>任何时刻, 游戏的双方拥有相同的行动集合.</li>
+  <li>任何相同的状态下, 无论当前由哪一方行动, 他都拥有相同的行动集合.</li>
   <li>行动集合为空的玩家失败, 另一方获胜.</li>
-  <li>游戏一定会结束.</li>
+  <li>游戏总是在有限时间内结束(不存在无限长的行动序列).</li>
 </ul>
-
-<p>为了简单起见, 我们暂时只考虑有限的公平组合游戏. 也就是说, 对应的有向图是有限的. 这时候, 游戏构成一个可数无限集, 称为 $\mathcal{G}$.</p>
-
-<p>任何公平组合游戏都等价于一个有向图游戏. 有向图游戏是这样的游戏: 在一个有限有向无环图上, 某个节点上有一个棋子, 玩家轮流行动, 每次选择一条当前棋子所在节点的出边, 将棋子移动到出边的终点. 无法移动的玩家失败.</p>
 
 <p>公平组合游戏是先手必胜或者后手必胜的.</p>
 
-<p>显然, 一个有向图游戏进行一次合法操作以后依然是一个有向图游戏, 我们把 $G$ 进行一次操作后得到的所有游戏的集合称为它的后继集合 $Next(G)$. $Next(G) = \varnothing$ 的游戏是后手必胜的. 如果 $Next(G)$ 中存在游戏是后手必胜的, 则 $G$ 先手必胜, 否则它后手必胜.</p>
+<p>简单起见, 本文只考虑有限的公平组合游戏, 即游戏的状态只有有限种. 这时候, 所有游戏构成一个可数无限集, 记作 $\mathcal{G}$.</p>
 
-<p>一个典型的公平组合游戏是 Nim 游戏. 它是说: 有若干堆石子, 每次玩家必须选择一堆石子, 减少它的数量(可以减少至 $0$). 如果所有石子堆都为空, 则无法操作, 当前玩家失败.</p>
+<p>有限有向图游戏是这样的游戏: 在一个有限的有向无环图上, 初始时一个特定节点上有一个棋子. 玩家轮流行动, 每次选择当前棋子所在节点的一条出边, 将棋子移动到出边的终点. 无法行动的玩家失败. 所有有限的公平组合游戏都等价于一个有限有向图游戏, 所以 $\mathcal{G}$ 也可以指所有有限有向图游戏的集合.</p>
 
-<p>对于只有一堆石子的 Nim 游戏, 先手显然必胜. 对于退化的 Nim 游戏(没有任何石子), 后手显然必胜. 对于有多堆石子的 Nim 游戏, 判断游戏的胜负性质(先手必胜还是后手必胜)是非常困难的.</p>
+<p>显然, 一个有限有向图游戏(如果不处于结束态), 进行一次操作以后依然是一个有限有向图游戏. 我们把 $G \in \mathcal{G}$ 在进行一次操作后能得到的所有游戏的集合称为它的后继集合 $Next(G)$. 如果 $Next(G) = \varnothing$ 即 $G$ 处于结束态, 那么显然它后手必胜. 如果 $Next(G)$ 中存在游戏是后手必胜的, 则 $G$ 先手必胜, 否则它后手必胜.</p>
+
+<p>一个典型的公平组合游戏是 Nim 游戏. 它是说: 有若干堆石子, 每次玩家必须选择一堆石子, 减少它的数量(至少减少 $1$, 可以减少至 $0$ 即删除这一堆). 如果没有非空石子堆, 则无法操作, 当前玩家失败.</p>
+
+<p>对于只有一堆石子(非空)的 Nim 游戏, 先手显然必胜. 对于退化的 Nim 游戏(没有任何石子), 后手显然必胜. 不过, 对于有多堆石子的 Nim 游戏, 判断游戏的胜负性质(先手必胜还是后手必胜)是困难的.</p>
 
 <h2 id="sg-定理">SG 定理</h2>
 
 <h3 id="游戏的和">游戏的和</h3>
 
-<p>如果有一系列有向图游戏 $G_1, G_2, \cdots G_n$, 定义这些游戏的和: $\bigoplus\limits_{i=1}^{n} G_n$ 是这样的游戏: 每次玩家可以任意选择一个 $k\in [n]$, 在 $G_k$ 中进行一次行动(如果 $G_k$ 中有合法行动). 无法行动的玩家失败.</p>
+<p>对于两个有向图游戏 $G_1, G_2\in \mathcal{G}$, 定义两者的<strong>游戏的和</strong> $G_1 \oplus G_2$ 是这样的游戏: 每次玩家可以任意选择一个未结束的游戏, 在选定的游戏中进行一次行动, 另一个游戏则保持不变. 无法行动的玩家失败.</p>
 
-<p>容易发现, 有向图游戏的和还是公平组合游戏, 对应的有向图游戏就是所有图的笛卡尔积所构成的有向图游戏. 设有向图游戏 $G$ 对应的图的大小是 $\vert G\vert$, 那么$\left\vert\bigoplus\limits_{i=1}^{n}G_i\right\vert = \prod\limits_{i=1}^{n}\vert G_i\vert$. 显然, 在实践中, 很难运用这种方法来判断游戏的和的胜负性质.</p>
+<p>游戏的和的概念可以由两个游戏扩展到多个游戏. 不过, 这不是必要的. 因为游戏的和作为 $\mathcal{G}$ 上的二元运算, 满足交换律与结合律, 所以可以将多个游戏依次求和来得到它们总体的和.</p>
 
 <h3 id="探索游戏的和的胜负性质">探索游戏的和的胜负性质</h3>
 
-<p>复杂的游戏有时是由简单游戏的和构成的. 比如, 多堆的 Nim 游戏, 本质上是单堆 Nim 游戏的和. 这启发我们探索游戏的和的胜负性质.</p>
+<p>复杂的游戏有时可以由简单游戏的和构造而成. 比如, 多堆的 Nim 游戏, 本质上是多个单堆 Nim 游戏的和. 这启发我们探索游戏的和的胜负性质.</p>
 
-<p>对于任何有向图游戏 $G$, 定义 $W(G) = [G\text{ 先手必胜}]$. 为了分析游戏的和的胜负性质, 我们当然希望, $W(G_1\oplus G_2) = \sigma(W(G_1), W(G_2))$. 但是这是做不到的. 一个反例是, ${1,1}$ 的 Nim 游戏是先手必败的, 而 ${1,2}$ 的 Nim 游戏先手必胜, 但是 ${1}$ 和 ${2}$ 的 Nim 游戏都是先手必胜.</p>
+<p>对于任何有向图游戏 $G$, 定义 $W(G) = [G\text{ 先手必胜}]$. 不幸的是, 不存在二元运算 $\sigma$ 使得 $W(G_1\oplus G_2) = \sigma(W(G_1), W(G_2))$. 一个反例是, 堆大小分别为 $\{1,1\}$ 的 Nim 游戏是后手必胜的, 而 $\{1,2\}$ 的 Nim 游戏先手必胜; 但是 $\{1\}$ 和 $\{2\}$ 的 Nim 游戏都是先手必胜的.</p>
 
-<p>实际上, 此时我们在做的就是将所有有向图游戏分为两类: 先手必胜或后手必胜, 并且期待同一分类中的游戏, 在游戏的和这个运算的意义下, 具有完全相同的特性. 而这当然是一种一厢情愿.</p>
-
-<p>更有效的做法是, 定义这样的分类函数, 满射 $f: \mathcal{G}\to S$, 使得: $\exists \sigma: S^2\to S, \forall G_1, G_2, \text{有 }f(G_1\oplus G_2) = \sigma(f(G_1), f(G_2))$; 同时 $\exists w:S\to {0,1}, w(f(G)) = W(G)$. 这就是我们探索游戏的和的胜负性质的基本思路.</p>
+<p>更有效的做法是, 寻找这样的分类函数, 将有限的公平组合游戏映射到一个标记集 $S$ 上, 即 $f: \mathcal{G}\to S$. 它使得: $\exists \sigma: S^2\to S, \forall G_1, G_2, \text{有 }f(G_1\oplus G_2) = \sigma(f(G_1), f(G_2))$; 同时 $\exists w:S\to \{0,1\}, w(f(G)) = W(G)$.</p>
 
 <h3 id="寻找最优刻画">寻找最优刻画</h3>
 
-<p>当然, 我们可以将所有有向图游戏用自然数标号, 然后定义 $f$ 是平凡的映射(将每个游戏自己分为一类), 这显然符合要求. 但是为了方便分析复杂的游戏, 我们希望合并尽可能多本质相同的游戏, 也就是说, 希望将 $\mathcal{G}$ 划分为尽可能少的等价类.</p>
+<p>当然, 我们可以将所有有限有向图游戏用自然数标号, 然后定义 $f$ 是平凡的映射(将每个游戏自己分为一类), 这符合上文中的定义, 但没有任何意义. 但是为了分析复杂的游戏, 我们希望将尽可能多的 $\mathcal{G}$ 中的元素合并为一类.</p>
 
-<p>为了寻找这种划分方式, 从代数的视角重新看待这个问题. 需要寻找的 $f$ 应该满足: 若 $\forall G\in \mathcal{G}, W(G_1\oplus G) = W(G_2\oplus G)$, 则 $f(G_1) = f(G_2)$, 反之亦然. 那么可以得到:</p>
+<p>具体地, 怎样的游戏可以合并为一类呢? 若 $\forall G\in \mathcal{G}, W(G_1\oplus G) = W(G_2\oplus G)$, 那么可以认为, $G_1$ 和 $G_2$ 在游戏的和意义下完全相同, 所以此时我们令 $f(G_1) = f(G_2)$. 另一方面, 如果 $f(G_1) = f(G_2)$, 那么根据 $f$ 的定义, 必然满足 $\forall G\in \mathcal{G}, W(G_1\oplus G) = W(G_2\oplus G)$. 所以, 不妨令这是 $f(G_1) = f(G_2)$ 的充要条件.</p>
+
+<p>接下来, 我们从代数的角度分析 $\sigma$ 应该具有的性质.</p>
+
+<p>根据游戏的和的性质, 我们得到:</p>
 
 <ul>
   <li>$\forall a,b\in S, \text{有 }\sigma(a, b) = \sigma(b, a)\in S$.</li>
   <li>$\forall a,b,c\in S, \text{有 }\sigma(\sigma(a, b), c) = \sigma(a, \sigma(b, c))$.</li>
+</ul>
+
+<p>对于一个后手必胜的游戏 $G_0$, 它与任何其他游戏 $G$ 的和都与 $G$ 具有相同胜负状态. 这是因为, 假设 $G$ 是先手必胜的, 则先手只需在 $G$ 上正常行动, 将它转变为一个后手必胜游戏; 假设 $G$ 是后手必胜的, 那么此时的先手没有办法通过在 $G_0$ 上进行行动来扭转局面: 因为要么 $G_0$ 已经是结束状态, 要么先手行动后, $G_0$ 转变为先手必胜态, 此时原来的后手行动, 他可以跟随原来的先手在 $G_0$ 上行动, 将它变回后手必胜态. 所以, 所有后手必胜的游戏本质上都和结束态游戏 $\varnothing$ 相同. 它们的 $f$ 值都等于 $f(\varnothing)$. 并且满足:</p>
+
+<ul>
   <li>$\forall a\in S, \text{有 }\sigma(a, f(\varnothing)) = a$.</li>
+</ul>
+
+<p>除此之外, 所有游戏与自身的和都是后手必胜的: 因为先手无论选择哪个游戏以及如何进行行动, 后手都可以在另一个完全相同的游戏上模仿. 所以满足:</p>
+
+<ul>
   <li>$\forall a\in S, \text{有 }\sigma(a, a) = f(\varnothing)$.</li>
 </ul>
 
 <p>事实上, 这正是在说 $(S, \sigma)$ 构成一个 Abel 群, 并且 $f(\varnothing)$ 是其中的单位元, 每个元素的逆元都是它自己.</p>
 
-<p>下面证明, $(S, \sigma)$ 同构于 $(N, \operatorname{xor})$. 首先证明它是可数无限集. 因为所有有向图游戏是可数的, 所以 $S$ 必然可数; 同时注意到, 所有单堆 Nim 游戏彼此都不等价, 这是因为 $\forall n\neq m, W(Nim(n)\oplus Nim(n))\neq W(Nim(n)\oplus Nim(m))$, 所以 $S$ 必然是无限集合.</p>
+<p>下面证明, $(S, \sigma)$ 同构于 $(N, \operatorname{xor})$. 首先证明它是可数无限集. 因为所有有限有向图游戏是可数的, 所以 $S$ 必然可数; 同时注意到, 所有单堆 Nim 游戏彼此都不等价, 这是因为 $\forall n\neq m, W(Nim(n)\oplus Nim(n))\neq W(Nim(n)\oplus Nim(m))$, 所以 $S$ 必然是无限集合.</p>
 
-<p>因为 $S$ 是可数无限集合, 不妨将所有元素排序, 定义一个元素 $x$ 可以被一些其他元素的集合 $T$ 表出, 表示存在 $T$ 的一个有限子集, 它们全部运算起来恰好得到 $x$, 然后定义 $Gen(S)$ 是所有 $S$ 中不能被标号小于自己的元素的集合表出的元素构成的集合. 显然, 这是一个可数无限集, 并且 $S$ 中所有元素可以被 $Gen(S)$ 表出. 这样, 不难通过生成元集构造 $(S, \sigma)$ 到 $(\mathbb{N}, \operatorname{xor})$ 的双射.</p>
+<p>因为 $S$ 是可数无限集合, 不妨将所有元素排序, 并定义一个元素 $x$ 可以被一个集合 $T$ 表出, 表示存在 $T$ 的一个有限子集, 它们全部运算起来恰好得到 $x$, 然后定义 $Gen(S)$ 是 $S$ 中不能被”标号小于自己的元素组成的集合”表出的所有元素组成的集合. 显然, 这是一个可数无限集, 并且 $S$ 中所有元素可以被 $Gen(S)$ 表出. 这样, 不难构造 $(S, \sigma)$ 到 $(\mathbb{N}, \operatorname{xor})$ 的同构映射.</p>
 
-<p>由此得到, 必然存在从 $(\mathcal{G}, \oplus)$ 到 $(\mathbb{N}, \operatorname{xor})$ 的同态映射 $f$, 它完美地反映了在游戏的和意义下, 游戏的结构性质. 并且, $f(\varnothing) = 0$. 事实上, 所有后手必胜游戏的函数值都是 $0$, 也就是说, 上文中 $w(n) = [n \neq 0]$. 这个映射 $f$ 就叫做这个游戏的 SG 函数. 下面, 我们记 $G$ 的 SG 函数为 $SG(G)$.</p>
+<p>由此得到, 必然存在从 $(\mathcal{G}, \oplus)$ 到 $(\mathbb{N}, \operatorname{xor})$ 的同态映射 $f$, 它完美地反映了在游戏的和意义下各种游戏的性质. 其中 $f(\varnothing) = 0$, 且所有后手必胜游戏的函数值都是 $0$, 也就是说, 上文中 $w(n) = [n \neq 0]$. 这个映射 $f$ 就叫做游戏的<strong>一种</strong> SG 函数. 下面, 我们记 $G$ 的 SG 函数为 $SG(G)$.</p>
 
 <h3 id="sg-定理-1">SG 定理</h3>
 
-<p>上一段中得到了 SG 函数的存在性, 并且知道 SG 函数的运算总是(或同构于)自然数的异或运算. 所有的 SG 函数都完美地刻画了游戏在游戏的和这个运算下的性质, 但是 SG 函数不是唯一的. 事实上, 如果有一种 SG 函数 $SG_1$, 很容易创建出另一种 SG 函数 $SG_2$, 它将 $SG_1$ 的函数值的某两个二进制位对调, 显然这也是一种合法的 SG 函数. 不过, 在这么多种 SG 函数中, 只需要一种就够了.</p>
+<p>上一段中得到了 SG 函数的存在性, 并且知道 SG 函数值的运算总是同构于自然数的异或运算. 所有的 SG 函数都完美地刻画了游戏在游戏的和这个运算下的性质, 但是 SG 函数不是唯一的, 因为如果有一种 SG 函数 $SG_1$, 可以据此构造出另一种函数 $SG_2$, 它将 $SG_1$ 的函数值的某两个二进制位对调, 显然它也是一种合法的 SG 函数. 不过, 在这么多种 SG 函数中, 只需要一种就够了.</p>
 
 <blockquote>
   <p>SG 定理: 任何有向图游戏 $G$ 都与某个单堆 Nim 游戏的 SG 值相同. 任何两个不同的单堆 Nim 游戏具有不同的 SG 值.</p>
 </blockquote>
 
-<p>下面证明这个定理. 后一句话是显然的, 对于前一句话, 我们按照有向图游戏”理论上的最长游戏回合数”进行归纳. 这样, 每个游戏的所有后继游戏, 都在它本身之前完成了归纳证明.</p>
+<p>下面证明这个定理. 后一句话是显然的, 对于前一句话, 我们按照有向图游戏”理论上的最长游戏回合数”进行归纳. 这样, 每个游戏的所有后继游戏, 都在它本身之前完成了证明.</p>
 
 <p>对于游戏 $G$ 考虑它的后继游戏对应的单堆 Nim 游戏构成的集合 $Follow(G)$, 取这个集合中没有出现过的最小自然数 $t$, 我们证明, $G$ 与 $Nim(t)$ 具有相同 SG 函数值. 这只需要证明 $G\oplus Nim(t)$ 后手必胜.</p>
 
@@ -200,7 +208,7 @@
 
 <p>如果第一步操作的是 $Nim(t)$, 得到了 $Nim(t’)(t’&lt;t)$, 那么 $Follow(G)$ 中一定有某个游戏的 SG 值与 $Nim(t’)$ 相同, 从而接下来, 操作的一方可以将 $G$ 转移到这个后继游戏, 使得游戏变为后手必胜态. 于是上述定理得证.</p>
 
-<p>实际上, 这样就可以定义, 一个有向图游戏的标准 SG 值是与它等价的那个单堆 Nim 游戏的石子数. 而 SG 值的求解方法就是递归求解所有后继游戏的 SG 值, 然后对这个集合取”最小未出现自然数”. 最小未出现自然数记作 $\operatorname{mex}$. 至此, 我们得到了完整版本的 SG 定理.</p>
+<p>实际上, 这样就可以定义, 一个有向图游戏的标准 SG 值是与它等价的那个单堆 Nim 游戏的石子数. 而 SG 值的求解方法就是递归求解所有后继游戏的 SG 值, 然后对这个集合取”最小未出现自然数”($\operatorname{mex}$). 至此, 我们得到了完整版本的 SG 定理.</p>
 
 <h2 id="反常游戏">反常游戏</h2>
 
@@ -208,7 +216,7 @@
 
 <p>注意, 不能简单地将反常游戏理解为在对应版本的有向图游戏的终止节点后接上一个节点(“补偿操作”), 重新计算 SG 值. 这是因为, 几个反游戏的和不是对应的补偿游戏的和. 反游戏的和中, 某个子游戏结束后不能再对它操作; 但是, 如果简单地将每个反子游戏进行补偿操作转化为一般游戏, 然后再取游戏的和, 那么子游戏结束后都可以进行一次补偿操作, 这不符合反游戏的定义.</p>
 
-<p>反常游戏的研究是很复杂的, 但是对于一类类似反 Nim 游戏的反常游戏, 有着与 SG 定理相似的结论, 这一结论在贾志浩的国家集训队论文中最早被引进, 常被称为 SG-Jia 定理(SJ 定理).</p>
+<p>反常游戏的研究是很复杂的, 但是对于一类类似反 Nim 游戏的反常游戏, 有着与 SG 定理相似的结论, 这一结论在贾志浩的国家集训队论文中最早被引进, 常被称为 SG-Jia 定理(或 SJ 定理).</p>
 
 <blockquote>
   <p>定义反常游戏的 SG 值是与它拥有相同有向图结构的一般游戏的 SG 值. 这种情况下, 如果某个反常游戏满足: 任何时刻, 如果游戏的 SG 值为 0, 那么它必定已经处于终止状态; 那么我们称这种游戏是 Jia-反常游戏. 反 Nim 游戏是 Jia-反常游戏. Jia-反常游戏的和不一定是 Jia-反常游戏.</p>
@@ -232,4 +240,4 @@
   <li>如果有不止一堆的异或和大于 $1$, 那么先手选择一堆, 操作后一定可以转化为第二类中后手必胜的情况, 即异或和为 $0$ 但是存在子游戏 SG 值大于 $1$.</li>
 </ol>
 
-<p>如果存在当前子游戏的 SG 值大于 $1$, 但是异或和为 $0$. 那么此时, 至少存在两个子游戏的值大于 $1$(否则 $2$ 以上的二进制位无法抵消). 所以先手无论如何操作, 都会转化为至少存在一堆 SG 值大于 $1$ 而异或和不等于 $0$ 的情形, 从而他必败. 综上所述, SG-Jia 定理得证.</p>]]></content><author><name>kyEEcccccc</name></author><category term="XCPC" /><summary type="html"><![CDATA[从零开始推导出 SG 定理.]]></summary></entry></feed>
+<p>如果存在当前子游戏的 SG 值大于 $1$, 但是异或和为 $0$. 那么此时, 至少存在两个子游戏的值大于 $1$(否则 $2$ 以上的二进制位无法抵消). 所以先手无论如何操作, 都会转化为至少存在一堆 SG 值大于 $1$ 而异或和不等于 $0$ 的情形, 从而他必败. 综上所述, SG-Jia 定理得证.</p>]]></content><author><name>kyEEcccccc</name></author><category term="XCPC" /><summary type="html"><![CDATA[SG 定理的理论基础, 以及反常游戏的相关拓展知识.]]></summary></entry></feed>

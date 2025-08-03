@@ -4,8 +4,6 @@ title: "关于我"
 permalink: /about-me/
 ---
 
-## 关于我
-
 教育经历: 常州市觅渡桥小学; 常州外国语学校; 江苏省常州高级中学; 复旦大学.
 
 高中期间参加信息学奥赛([OIer DB 档案](https://oier.baoshuo.dev/oier/85664)).
