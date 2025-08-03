@@ -1,4 +1,5 @@
 ---
-layout: home
-title: 主页
+layout: select_home
+title: 文章
+select: page
 ---

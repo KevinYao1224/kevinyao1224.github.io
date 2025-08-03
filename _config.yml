@@ -35,7 +35,7 @@ theme_setting:
   nav_pages:
     - "index.markdown"
     - "categories.markdown"
-    - "symbols.markdown"
+    - "notes.markdown"
     - "about-me.markdown"
 
 # Build settings

@@ -1,7 +1,9 @@
 ---
-layout: page
-title: "符号约定"
-permalink: /symbols/
+layout: post
+title: 符号约定
+permalink: archive/2025/08/03/符号约定
+excerpt: 一些文章中用到的数学符号
+top: true
 ---
 
 - 高斯括号: $[s]$ 表示如果 $s$ 为真, 那么值为 $1$, 否则为 $0$.

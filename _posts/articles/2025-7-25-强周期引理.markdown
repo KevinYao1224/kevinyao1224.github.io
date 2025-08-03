@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "笔记: 强周期引理"
-permalink: archive/2025/7/25/笔记-强周期引理
+title: 强周期引理
+permalink: archive/2025/7/25/强周期引理
 categories: XCPC
 excerpt: 强周期引理的典范证明
 ---
