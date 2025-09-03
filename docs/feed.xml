@@ -1,6 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-08-03T16:00:37+08:00</updated><id>/feed.xml</id><title type="html">kyEEcccccc 的枢纽</title><subtitle></subtitle><author><name>kyEEcccccc</name></author><entry><title type="html">符号约定</title><link href="/archive/2025/08/03/%E7%AC%A6%E5%8F%B7%E7%BA%A6%E5%AE%9A" rel="alternate" type="text/html" title="符号约定" /><published>2025-08-03T00:00:00+08:00</published><updated>2025-08-03T00:00:00+08:00</updated><id>/archive/2025/08/03/%E7%AC%A6%E5%8F%B7%E7%BA%A6%E5%AE%9A</id><content type="html" xml:base="/archive/2025/08/03/%E7%AC%A6%E5%8F%B7%E7%BA%A6%E5%AE%9A"><![CDATA[<ul>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-09-03T15:25:50+08:00</updated><id>/feed.xml</id><title type="html">kyEEcccccc 的枢纽</title><subtitle></subtitle><author><name>kyEEcccccc</name></author><entry><title type="html">字符串算法拾遗</title><link href="/archive/2025/09/03/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95%E6%8B%BE%E9%81%97" rel="alternate" type="text/html" title="字符串算法拾遗" /><published>2025-09-03T00:00:00+08:00</published><updated>2025-09-03T00:00:00+08:00</updated><id>/archive/2025/09/03/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95%E6%8B%BE%E9%81%97</id><content type="html" xml:base="/archive/2025/09/03/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95%E6%8B%BE%E9%81%97"><![CDATA[<h2 id="最小表示法">最小表示法</h2>
+
+<blockquote>
+  <p>给定一个字符串 $s$, 在它的所有循环移位形成的串中, 字典序最小的是哪个?</p>
+</blockquote>
+
+<p>与 Z 函数类似, 我们考虑一种类增量做法. 下面记以第 $i$ 位开始的循环移位串是 $s^{(i)}$.</p>
+
+<p>首先, 不妨比较 $s^{(1)}$ 和 $s^{(2)}$, 这个过程中, 记录 $s^{(1)}$ 和 $s^{(2)}$ 的 LCP, 不妨设它的长度为 $l$, 并且按照字典序 $s^{(1)} &lt; s^{(2)}$. 则对于所有 $i$ 使得 $2\le i\le l+1$, $s^{(i)}$ 都不是字典序最小的循环移位串. 这是因为, 根据 $s^{(1)}$ 和 $s^{(2)}$ 的比较结果, 显然有 $s^{(i-1)} &lt; s^{(i)}$. 所以我们接下来只需要比较 $s^{(1)}$ 和 $s^{(l + 2)}$. 注意到, 这时候虽然我们暴力枚举了长度为 $l$ 的串进行比较, 但同时排除了 $l$ 个可能的答案, 因此可能给出一个线性时间的做法.</p>
+
+<p>具体地, 维护一对指针 $(i, j)$, 初始为 $(1, 2)$, 随后暴力枚举以 $i, j$ 开头的串的 LCP, 设长度为 $t$, 且 $s^{(i)} &lt; s^{(j)}$, 则将 $j$ 移动到 $j + t$. 如果这使得 $i = j$, 则使 $j = i + 1$. 当发现两个串相等时, 或有一个指针移动的超过了 $n$ 时, 即可统计答案. 时空复杂度 $\Theta(n)$.</p>
+
+<h2 id="回文自动机">回文自动机</h2>
+
+<p>回文自动机是识别一个字符串的所有回文子串的<strong>右半部分</strong>的自动机. 实际上, 回文自动机的结构形如两棵树(所以又叫”回文树”), 分别对应该串的所有本质不同的长度为奇数和偶数的回文子串. 实际上, 一个字符串的本质不同回文子串最多只有 $\mathrm{O}(n)$ 种, 这正是回文自动机的理论基础.</p>
+
+<p>下面简述回文自动机的构造方法, 这同时给出了上述命题的证明. 首先, 回文自动机的每个节点表示字符串中一种本质不同的回文子串, 它的父亲节点表示这个回文子串去除掉第一个和最后一个字符后得到的串对应的节点(对于长度为 $1$ 的串对应的节点, 它的父亲节点是长度为 $-1$ 的特殊节点”奇根”; 而对长度为 $2$ 的串, 父亲是长度为 $0$ 的”偶根”). 同时, 每个节点上还记录对应串的最长回文后缀对应的节点, 这被叫做 “失配(fail)指针”.</p>
+
+<p>一个回文串的回文前/后缀必然是它的一个 Border, 反之亦然. 所以一个节点的 fail 指针指向的也是它对应串的最长 Border 对应的节点. 我们考虑以每个节点对应的回文子串在原串中出现的最前位置的右端点作为它的”构造时刻”. 不难发现, 一个节点的父节点和它的 fail 指针指向的节点, 构造时刻都严格早于这个节点自身, 所以可以用增量的方法构造回文树.</p>
+
+<p>首先, 向回文树中加入奇根和偶根, 令偶根的 fail 指针指向奇根. 这一步是纯粹技巧性的, 因为偶根失配的情况属于特殊情况; 另一方面, 奇根的 fail 指针没有意义 - 因为这个节点永远不会失配. 记录一个指针 cur, 表示当前已经加入的原串的前缀的最长回文后缀对应的节点. 当然, 初始时这个节点是偶根.</p>
+
+<p>接下来, 每次从 cur 开始, 不断跳跃 fail 链, 从长到短遍历当前前缀的所有回文后缀, 找到第一个允许加入新字符的回文后缀, 如果这个节点下已经有一个子节点对应加入新字符的情况, 则直接将 cur 指向已有节点. 否则新创建一个节点, 将新创建的节点挂在对应节点的下面, 然后继续跳跃 fail 链, 寻找第二长的允许加入新字符的回文后缀, 将它加入新字符后得到的节点(必然已经存在)作为新节点的 fail 指针. 当然, 如果父节点已经是奇根, 即新节点是单字符字符串对应的节点, 那么它的 fail 链直接指向偶根即可.</p>
+
+<p>运用势能分析的方法, 不难发现上述过程中, 不断跳跃 fail 链的过程会使得 cur 指针指向的节点在 fail 树中的深度变小, 而每次加入新节点只会使得 cur 指向的节点在 fail 树种深度增加 1, 所以建立过程的时间复杂度是线性的. 另一方面, 这个过程中, 每次最多加入一个节点, 所以回文树的总节点数最多是 $n + 2$.</p>]]></content><author><name>kyEEcccccc</name></author><category term="XCPC" /><summary type="html"><![CDATA[简要回顾最小表示法与回文自动机(回文树)的原理.]]></summary></entry><entry><title type="html">符号约定</title><link href="/archive/2025/08/03/%E7%AC%A6%E5%8F%B7%E7%BA%A6%E5%AE%9A" rel="alternate" type="text/html" title="符号约定" /><published>2025-08-03T00:00:00+08:00</published><updated>2025-08-03T00:00:00+08:00</updated><id>/archive/2025/08/03/%E7%AC%A6%E5%8F%B7%E7%BA%A6%E5%AE%9A</id><content type="html" xml:base="/archive/2025/08/03/%E7%AC%A6%E5%8F%B7%E7%BA%A6%E5%AE%9A"><![CDATA[<ul>
   <li>高斯括号: $[s]$ 表示如果 $s$ 为真, 那么值为 $1$, 否则为 $0$.</li>
   <li>正整数集: $[n] (n \in \mathbb{Z}^+)$ 表示 $\{x \in \mathbb{Z}: 1 \le x \le n\}$.</li>
+  <li>字符串一律以下标 $1$ 开始.</li>
+  <li>子串: $s_{[l,r]}$ 表示子串, 子串是连续的. 存在 $s$ 的子串等于串 $t$ 记作 $t \subseteq s$.</li>
+  <li>字符串拼接: 直接将两个字符串连接(即乘法记号)表示字符串拼接, 此时幂表示重复拼接. 为了方便, 有时候也用 $s+t$ 表示 $s$ 和 $t$ 的拼接, 注意自行区分, 或查找对应文中的说明.</li>
 </ul>]]></content><author><name>kyEEcccccc</name></author><summary type="html"><![CDATA[一些文章中用到的数学符号]]></summary></entry><entry><title type="html">HDU6190 Law of Commutation</title><link href="/archive/2025/07/30/HDU6190-Law-of-Commutation" rel="alternate" type="text/html" title="HDU6190 Law of Commutation" /><published>2025-07-30T00:00:00+08:00</published><updated>2025-07-30T00:00:00+08:00</updated><id>/archive/2025/07/30/HDU6190-Law-of-Commutation</id><content type="html" xml:base="/archive/2025/07/30/HDU6190-Law-of-Commutation"><![CDATA[<blockquote>
   <p>参考:</p>
 
@@ -80,7 +107,7 @@
     
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div>]]></content><author><name>kyEEcccccc</name></author><category term="XCPC" /><summary type="html"><![CDATA[解数论方程 $a^b \equiv b^a \pmod{2^n}$]]></summary></entry><entry><title type="html">强周期引理</title><link href="/archive/2025/7/25/%E5%BC%BA%E5%91%A8%E6%9C%9F%E5%BC%95%E7%90%86" rel="alternate" type="text/html" title="强周期引理" /><published>2025-07-25T00:00:00+08:00</published><updated>2025-07-25T00:00:00+08:00</updated><id>/archive/2025/7/25/%E5%BC%BA%E5%91%A8%E6%9C%9F%E5%BC%95%E7%90%86</id><content type="html" xml:base="/archive/2025/7/25/%E5%BC%BA%E5%91%A8%E6%9C%9F%E5%BC%95%E7%90%86"><![CDATA[<h2 id="border-与周期">Border 与周期</h2>
+</code></pre></div></div>]]></content><author><name>kyEEcccccc</name></author><category term="XCPC" /><summary type="html"><![CDATA[解数论方程 $a^b \equiv b^a \pmod{2^n}$]]></summary></entry><entry><title type="html">强周期引理</title><link href="/archive/2025/07/25/%E5%BC%BA%E5%91%A8%E6%9C%9F%E5%BC%95%E7%90%86" rel="alternate" type="text/html" title="强周期引理" /><published>2025-07-25T00:00:00+08:00</published><updated>2025-07-25T00:00:00+08:00</updated><id>/archive/2025/07/25/%E5%BC%BA%E5%91%A8%E6%9C%9F%E5%BC%95%E7%90%86</id><content type="html" xml:base="/archive/2025/07/25/%E5%BC%BA%E5%91%A8%E6%9C%9F%E5%BC%95%E7%90%86"><![CDATA[<h2 id="border-与周期">Border 与周期</h2>
 
 <p>一个字符串的一个 Border, 是指它的一个真前缀, 这个真前缀与它的同样长度的真后缀完全相同. 同时, 有时也指某个 Border 的长度.</p>
 
@@ -114,7 +141,7 @@
 
 <p>强周期引理有许多证明方法. 这里给出最典范的一个.</p>
 
-<p>首先分析强周期引力的实质. 考虑将 $\mathbb{Z}^+$ 按照 ${} \bmod a$ 的余数分类, 那么会有 $a$ 类. 结合周期为 $b$ 的限制, 也就是会进行 $n - b$ 次合并, 每次将 $i \bmod a$ 和 $(i + b) \bmod a$ 所属的等价类合并($1\le i\le n - b$). 如果 $n$ 充分大, 显然, 最终只会剩下 $\gcd(a, b)$ 个等价类, 这正是弱周期引理向我们指出的. 强周期引理就是要探究, $n$ 最少是多少时, 所有能合并的等价类一定都合并完了. 这个值记作 $n_0$.</p>
+<p>首先分析强周期引理的实质. 考虑将 $\mathbb{Z}^+$ 按照 ${} \bmod a$ 的余数分类, 那么会有 $a$ 类. 结合周期为 $b$ 的限制, 也就是会进行 $n - b$ 次合并, 每次将 $i \bmod a$ 和 $(i + b) \bmod a$ 所属的等价类合并($1\le i\le n - b$). 如果 $n$ 充分大, 显然, 最终只会剩下 $\gcd(a, b)$ 个等价类, 这正是弱周期引理向我们指出的. 强周期引理就是要探究, $n$ 最少是多少时, 所有能合并的等价类一定都合并完了. 这个值记作 $n_0$.</p>
 
 <p>不难发现, 因为每次至多使等价类的个数减少 $1$, 所以, 至少需要 $a - \gcd(a, b)$ 次合并, 所以 $n - b \ge a - \gcd(a, b)$, 所以 $a + b - \gcd(a, b) \le n$. 也就是说, 强周期引理给出的不等式左式是 $n_0$ 的一个下界. 如果强周期引理成立, 那么它同时也是 $n_0$ 的一个上界. 下面, 我们具体地给出证明.</p>
 
