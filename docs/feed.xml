@@ -1,4 +1,119 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-09-03T15:25:50+08:00</updated><id>/feed.xml</id><title type="html">kyEEcccccc 的枢纽</title><subtitle></subtitle><author><name>kyEEcccccc</name></author><entry><title type="html">字符串算法拾遗</title><link href="/archive/2025/09/03/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95%E6%8B%BE%E9%81%97" rel="alternate" type="text/html" title="字符串算法拾遗" /><published>2025-09-03T00:00:00+08:00</published><updated>2025-09-03T00:00:00+08:00</updated><id>/archive/2025/09/03/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95%E6%8B%BE%E9%81%97</id><content type="html" xml:base="/archive/2025/09/03/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95%E6%8B%BE%E9%81%97"><![CDATA[<h2 id="最小表示法">最小表示法</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-09-03T16:33:30+08:00</updated><id>/feed.xml</id><title type="html">kyEEcccccc 的枢纽</title><subtitle></subtitle><author><name>kyEEcccccc</name></author><entry><title type="html">简述一类 Subset Sum 问题</title><link href="/archive/2025/09/03/%E7%AE%80%E8%BF%B0%E4%B8%80%E7%B1%BB-Subset-Sum-%E9%97%AE%E9%A2%98" rel="alternate" type="text/html" title="简述一类 Subset Sum 问题" /><published>2025-09-03T00:00:00+08:00</published><updated>2025-09-03T00:00:00+08:00</updated><id>/archive/2025/09/03/%E7%AE%80%E8%BF%B0%E4%B8%80%E7%B1%BB-Subset-Sum-%E9%97%AE%E9%A2%98</id><content type="html" xml:base="/archive/2025/09/03/%E7%AE%80%E8%BF%B0%E4%B8%80%E7%B1%BB-Subset-Sum-%E9%97%AE%E9%A2%98"><![CDATA[<blockquote>
+  <p>这是一个非常经典的问题, 例题可以见 QOJ-7403, 标题就是 Subset Sum.</p>
+</blockquote>
+
+<p>考虑这样的问题: 给出 $n$ 个物品, 第 $i$ 个物品的大小是 $a_i$, 且 $1 \leq a_i \leq V$, 给出一个容量 $C$, 求选择这些物品的一个子集, 使得总大小不超过 $C$ 的情况下, 总大小最大是多少.</p>
+
+<p>不难注意到, 有意义的 $C &lt; \sum a_i \le nV$. 否则可以选择全部的物品. 所以采用一般的背包 DP 解法, 可以在 $\Theta(nC) = \mathrm{O}(n^2V)$ 的时间内解决这个问题. 现在给出一种 $\mathrm{O}(nV)$ 的解法.</p>
+
+<p>首先, 用贪心的方式, 扫描所有物品, 能加入就加入. 设 $c$ 表示剩余的背包容量. 显然, 对于有意义的 $C$, 最终 $0 &lt; c &lt; V$, 有一些物品已经被加入背包, 有一些物品目前无法加入背包. 前者记为集合 $A$, 后者记为集合 $B$. 我们把当前的解称为初始解, 尝试从初始解调整得到一种最优解.</p>
+
+<p>不难证明, 任何一种合法的最优解一定可以用这样的方式从初始解调整而来: 我们允许在中间过程中将背包加到”溢出”, 即使得 $c &lt; 0$. 每次若当前 $c = 0$, 则已经获得一个最优解, 直接输出答案 $C$; 若当前 $c &gt; 0$, 则必须从 $B$ 中选择一个未加入的物品, 将它加入(但是不将其转移到 $A$ 中); 若当前 $c &lt; 0$, 则必须从 $A$ 中选择一个已加入的物品, 将它反悔(但是不将其转移到 $B$ 中).</p>
+
+<p>下面考虑这样的 DP, 设 $p_{k, i, j}$ 表示如果只考虑 $A$ 中前 $i$ 个元素和 $B$ 中前 $j$ 个元素, 那么可不可以令 $c = k$. 显然, 这个数组具有关于 $i$ 和 $j$ 的单调性, 所以可以改进为这样的记法: 设 $f_{i, k}$ 表示只考虑 $A$ 中前 $i$ 个元素, 要使得 $c = k$, 至少需要考虑 $B$ 中前几个元素(如果不存在这样的 $j$ 则令 $f_{i, k} = \vert B \vert + 1$). 显然, 这样状态集合的大小是 $\Theta(nV)$ 的.</p>
+
+<p>转移有以下 3 种:</p>
+
+<ol>
+  <li>$f_{i, k} \to f_{i + 1, k}$.</li>
+  <li>若 $k &lt; 0$, 则 $f_{i, k} \to f_{i + 1, k + A_{i + 1}}$.</li>
+  <li>若 $k &gt; 0, f_{i, k} &lt; j$, 则 $j \to f_{i + 1, k - B_{j}}$.</li>
+</ol>
+
+<p>注意到只有第 3 种转移不是 $\Theta(1)$ 的, 考虑针对它进行优化.</p>
+
+<p>由于第 1 种转移的存在, 因此 $f$ 关于 $i$ 单调减. 如果 $k &gt; 0, i \geq 1, j \ge f_{i - 1, k}$, 那么必然存在转移 $j \to f_{i - 1, k - B_j}$, 又存在 $f_{i - 1, k - B_j} \to f_{i, k - B_j}$, 所以对于每个 $f_{i, k}$, 只需要尝试 $f_{i, k} \le j &lt; f_{i - 1, k}$ 的 $j$ 来进行第 3 类转移. 根据 $f$ 关于 $i$ 的单调性, 这时第 3 种转移的总复杂度是 $\mathrm{O}(nV)$ 的.</p>
+
+<p>QOJ 7403 的参考代码如下:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">using</span> <span class="n">LL</span> <span class="o">=</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">ULL</span> <span class="o">=</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">;</span>
+
+<span class="cp">#define F(i, l, r) for (int i = (l); i &lt;= (r); ++i)
+#define FF(i, r, l) for (int i = (r); i &gt;= (l); --i)
+#define MAX(a, b) ((a) = max((a), (b)))
+#define MIN(a, b) ((a) = min((a), (b)))
+#define SZ(a) ((int)(a).size() - 1)
+</span>
+<span class="k">constexpr</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">20005</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="mi">20000</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">w0</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="n">N</span><span class="p">],</span> <span class="n">b</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">f</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="n">V</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">10</span><span class="p">];</span>
+
+<span class="kt">void</span> <span class="nf">work</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">c</span><span class="p">;</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vec</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+        <span class="n">F</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">vec</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">sort</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+        <span class="kt">int</span> <span class="n">cur</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">n1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">FF</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">cur</span> <span class="o">+</span> <span class="n">vec</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">c</span><span class="p">)</span> <span class="n">cur</span> <span class="o">+=</span> <span class="n">vec</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">b</span><span class="p">[</span><span class="o">++</span><span class="n">n2</span><span class="p">]</span> <span class="o">=</span> <span class="n">vec</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="k">else</span> <span class="n">a</span><span class="p">[</span><span class="o">++</span><span class="n">n1</span><span class="p">]</span> <span class="o">=</span> <span class="n">vec</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">n1</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">n2</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">cur</span> <span class="o">==</span> <span class="n">c</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">cur</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">w0</span> <span class="o">=</span> <span class="n">c</span> <span class="o">-</span> <span class="n">cur</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">int</span> <span class="n">ll</span> <span class="o">=</span> <span class="o">-</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">rr</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">w0</span><span class="p">);</span>
+    <span class="n">F</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">ll</span><span class="p">,</span> <span class="n">rr</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span> <span class="o">+</span> <span class="n">V</span><span class="p">]</span> <span class="o">=</span> <span class="n">n2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">w0</span> <span class="o">+</span> <span class="n">V</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">F</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n1</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">F</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ll</span><span class="p">,</span> <span class="n">rr</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">f</span><span class="p">[</span><span class="n">i</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">][</span><span class="n">x</span> <span class="o">+</span> <span class="n">V</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="n">i</span> <span class="o">&amp;</span> <span class="mi">1</span> <span class="o">^</span> <span class="mi">1</span><span class="p">][</span><span class="n">x</span> <span class="o">+</span> <span class="n">V</span><span class="p">];</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">x</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">rr</span><span class="p">)</span> <span class="n">MIN</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">i</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">][</span><span class="n">x</span> <span class="o">+</span> <span class="n">V</span><span class="p">],</span> <span class="n">f</span><span class="p">[</span><span class="n">i</span> <span class="o">&amp;</span> <span class="mi">1</span> <span class="o">^</span> <span class="mi">1</span><span class="p">][</span><span class="n">x</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">V</span><span class="p">]);</span>
+        <span class="p">}</span>
+        <span class="n">F</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ll</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">F</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">f</span><span class="p">[</span><span class="n">i</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">][</span><span class="n">x</span> <span class="o">+</span> <span class="n">V</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">min</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">i</span> <span class="o">&amp;</span> <span class="mi">1</span> <span class="o">^</span> <span class="mi">1</span><span class="p">][</span><span class="n">x</span> <span class="o">+</span> <span class="n">V</span><span class="p">],</span> <span class="n">n2</span><span class="p">))</span>
+            <span class="p">{</span>
+                <span class="n">MIN</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">i</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">][</span><span class="n">x</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="n">V</span><span class="p">],</span> <span class="n">j</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">i</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">][</span><span class="n">V</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">n2</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">c</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">F</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">rr</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">n1</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">][</span><span class="n">i</span> <span class="o">+</span> <span class="n">V</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">n2</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">c</span> <span class="o">-</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">assert</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">signed</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">),</span> <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">);</span>
+
+    <span class="kt">int</span> <span class="n">_</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">_</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">_</span><span class="o">--</span><span class="p">)</span> <span class="n">work</span><span class="p">();</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>]]></content><author><name>kyEEcccccc</name></author><category term="XCPC" /><summary type="html"><![CDATA[对于物品大小最大为 $V$ 的 Subset Sum 问题可以做到 $\mathrm{O}(nV)$ 的时间复杂度, 而传统背包 DP 解法只能做到 $\mathrm{O}(n^2V)$.]]></summary></entry><entry><title type="html">字符串算法拾遗</title><link href="/archive/2025/09/03/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95%E6%8B%BE%E9%81%97" rel="alternate" type="text/html" title="字符串算法拾遗" /><published>2025-09-03T00:00:00+08:00</published><updated>2025-09-03T00:00:00+08:00</updated><id>/archive/2025/09/03/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95%E6%8B%BE%E9%81%97</id><content type="html" xml:base="/archive/2025/09/03/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95%E6%8B%BE%E9%81%97"><![CDATA[<h2 id="最小表示法">最小表示法</h2>
 
 <blockquote>
   <p>给定一个字符串 $s$, 在它的所有循环移位形成的串中, 字典序最小的是哪个?</p>

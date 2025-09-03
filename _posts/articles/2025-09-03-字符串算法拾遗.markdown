@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 
+title: 字符串算法拾遗
 permalink: archive/2025/09/03/字符串算法拾遗
 categories: XCPC
 excerpt: 简要回顾最小表示法与回文自动机(回文树)的原理.
