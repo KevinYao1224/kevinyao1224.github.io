@@ -1,7 +1,7 @@
 ---
 title: 神奇的数学和有趣的代码
 date: 2026-06-20
-categories: [鲜花]
+categories: [小说]
 tags: []
 description:
 ---
