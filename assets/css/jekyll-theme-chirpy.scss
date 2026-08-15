@@ -1,0 +1,39 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+.bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+@font-face {
+  font-family: 'Maple Mono Normal NF CN';
+  src: url('{{ "/assets/fonts/MapleMonoNormal-NF-CN-Medium.ttf" | relative_url }}')
+    format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --bs-font-monospace:
+    'Maple Mono Normal NF CN',
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Liberation Mono',
+    'Courier New',
+    monospace;
+}
+
+code,
+pre,
+samp {
+  font-family: var(--bs-font-monospace);
+}
