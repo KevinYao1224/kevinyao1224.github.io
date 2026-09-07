@@ -16,10 +16,10 @@ timezone: Asia/Shanghai
 
 title: 通天塔 # the main title
 
-tagline: # it will display as the subtitle
+tagline: 即使如此, 我也从来没有受骗. # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  个人博客.
+  kyee 的枢纽.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -34,7 +34,7 @@ github:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Yi Yao
+  name: kyee
   email: kevinyao061224@gmail.com # change to your email address
   fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
   links:
