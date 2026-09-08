@@ -201,8 +201,10 @@ description: "针对新手的个人博客搭建指南."
 会显示为:
 
 # 标题
+{: data-toc-skip: ""}
 
 ## 标题2
+{: data-toc-skip: ""}
 
 你好  
 你好啊!
@@ -215,7 +217,7 @@ description: "针对新手的个人博客搭建指南."
 
 ---
 
-这是我的 [博客](blog.kyee.top).
+这是我的 [博客](https://blog.kyee.top).
 
 ---
 
