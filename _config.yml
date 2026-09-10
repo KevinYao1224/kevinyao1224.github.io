@@ -16,10 +16,10 @@ timezone: Asia/Shanghai
 
 title: 通天塔 # the main title
 
-tagline: 即使如此, 我也从来没有受骗. # it will display as the subtitle
+tagline: >- # it will display as the subtitle
+  于是, 每年都有一天, 工人们会拆下大理石做的屋檐, 推倒石墙和水泥柱子, 拆除市政大楼, 纪念碑, 船坞, 炼油厂与医院...
 
-description: >- # used by seo meta and the atom feed
-  kyee 的枢纽.
+description: # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
